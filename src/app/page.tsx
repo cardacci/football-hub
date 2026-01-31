@@ -31,8 +31,8 @@ export default function Home() {
 
 					<div className="flex flex-col justify-center gap-4 sm:flex-row">
 						<Link
-							href="/leagues"
 							className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-green-700 shadow-lg transition-colors hover:bg-green-50 hover:shadow-xl"
+							href="/leagues"
 						>
 							Explore Leagues
 							<svg
@@ -42,17 +42,17 @@ export default function Home() {
 								viewBox="0 0 24 24"
 							>
 								<path
+									d="M13 7l5 5m0 0l-5 5m5-5H6"
 									strokeLinecap="round"
 									strokeLinejoin="round"
 									strokeWidth={2}
-									d="M13 7l5 5m0 0l-5 5m5-5H6"
 								/>
 							</svg>
 						</Link>
 
 						<Link
-							href="/fixtures"
 							className="inline-flex items-center justify-center rounded-full border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-white/10"
+							href="/fixtures"
 						>
 							View Fixtures
 						</Link>
@@ -70,13 +70,13 @@ export default function Home() {
 					{/* Legend */}
 					<div className="mb-8 flex flex-wrap items-center justify-center gap-6">
 						<div className="flex items-center gap-2">
-							<span className="inline-flex h-3 w-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500"></span>
+							<span className="inline-flex h-3 w-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500" />
 							<span className="text-sm text-gray-600 dark:text-gray-400">
 								Club Competitions
 							</span>
 						</div>
 						<div className="flex items-center gap-2">
-							<span className="inline-flex h-3 w-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500"></span>
+							<span className="inline-flex h-3 w-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500" />
 							<span className="text-sm text-gray-600 dark:text-gray-400">
 								National Team Competitions
 							</span>
@@ -93,7 +93,7 @@ export default function Home() {
 										<h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
 											{continent.name}
 										</h3>
-										<div className="h-px flex-1 bg-gradient-to-r from-gray-200 to-transparent dark:from-gray-700"></div>
+										<div className="h-px flex-1 bg-gradient-to-r from-gray-200 to-transparent dark:from-gray-700" />
 									</div>
 									<div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
 										{continent.leagues.map((league) => {
@@ -101,12 +101,12 @@ export default function Home() {
 											return (
 												<Link
 													key={league.id}
-													href={`/leagues/${league.id}`}
 													className={`group relative overflow-hidden rounded-2xl p-[1px] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
 														isNational
 															? 'bg-gradient-to-br from-amber-400 via-orange-500 to-red-500'
 															: 'bg-gradient-to-br from-blue-400 via-cyan-500 to-teal-500'
 													}`}
+													href={`/leagues/${league.id}`}
 												>
 													<div className="group-hover:bg-opacity-95 dark:group-hover:bg-opacity-95 relative h-full rounded-2xl bg-white p-5 transition-all duration-300 dark:bg-gray-800">
 														{/* Glow effect */}
@@ -116,7 +116,7 @@ export default function Home() {
 																	? 'bg-amber-500'
 																	: 'bg-blue-500'
 															}`}
-														></div>
+														/>
 
 														<div className="relative flex items-center gap-4">
 															{/* Emoji with animated background */}
@@ -168,10 +168,10 @@ export default function Home() {
 																	viewBox="0 0 24 24"
 																>
 																	<path
+																		d="M9 5l7 7-7 7"
 																		strokeLinecap="round"
 																		strokeLinejoin="round"
 																		strokeWidth={2}
-																		d="M9 5l7 7-7 7"
 																	/>
 																</svg>
 															</div>
@@ -240,10 +240,10 @@ export default function Home() {
 						use the API features, you&apos;ll need to configure your API key.
 					</p>
 					<a
-						href="https://rapidapi.com/api-sports/api/api-football"
-						target="_blank"
-						rel="noopener noreferrer"
 						className="inline-flex items-center gap-2 rounded-full bg-green-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-green-700"
+						href="https://rapidapi.com/api-sports/api/api-football"
+						rel="noopener noreferrer"
+						target="_blank"
 					>
 						Get API Key
 						<svg
@@ -253,10 +253,10 @@ export default function Home() {
 							viewBox="0 0 24 24"
 						>
 							<path
+								d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
 								strokeLinecap="round"
 								strokeLinejoin="round"
 								strokeWidth={2}
-								d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
 							/>
 						</svg>
 					</a>
@@ -269,19 +269,19 @@ export default function Home() {
 					<p>
 						Built with{' '}
 						<a
-							href="https://nextjs.org"
 							className="text-green-600 hover:underline"
-							target="_blank"
+							href="https://nextjs.org"
 							rel="noopener noreferrer"
+							target="_blank"
 						>
 							Next.js
 						</a>{' '}
 						and{' '}
 						<a
-							href="https://tailwindcss.com"
 							className="text-green-600 hover:underline"
-							target="_blank"
+							href="https://tailwindcss.com"
 							rel="noopener noreferrer"
+							target="_blank"
 						>
 							Tailwind CSS
 						</a>

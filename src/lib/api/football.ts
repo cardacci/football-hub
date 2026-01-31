@@ -19,8 +19,8 @@ const API_HOST = 'api-football-v1.p.rapidapi.com';
  * Base headers for API requests
  */
 const getHeaders = (): HeadersInit => ({
-	'x-rapidapi-key': API_KEY,
 	'x-rapidapi-host': API_HOST,
+	'x-rapidapi-key': API_KEY,
 });
 
 /**
@@ -36,8 +36,8 @@ async function fetchFromAPI<T>(endpoint: string, params?: Record<string, string>
 	}
 
 	const response = await fetch(url.toString(), {
-		method: 'GET',
 		headers: getHeaders(),
+		method: 'GET',
 		next: { revalidate: 3600 }, // Cache for 1 hour
 	});
 
@@ -317,41 +317,31 @@ export async function getLiveFixtures(): Promise<Fixture[]> {
 // =============================================================================
 
 export const POPULAR_LEAGUES = {
-	// Europe - Domestic Leagues
-	PREMIER_LEAGUE: 39,
-	LA_LIGA: 140,
-	SERIE_A: 135,
-	BUNDESLIGA: 78,
-	LIGUE_1: 61,
-	// Europe - Continental Competitions
-	CHAMPIONS_LEAGUE: 2,
-	EUROPA_LEAGUE: 3,
-	EUROPA_CONFERENCE_LEAGUE: 848,
-	// South America - Domestic Leagues
+	// Africa - Continental Competitions
+	AFC_CHAMPIONS_LEAGUE: 17,
+	AFRICA_CUP: 6,
 	ARGENTINA_PRIMERA: 128,
+	ASIA_CUP: 7,
 	BRASIL_SERIE_A: 71,
-	// South America - Continental Competitions
+	BUNDESLIGA: 78,
+	CAF_CHAMPIONS_LEAGUE: 12,
+	CHAMPIONS_LEAGUE: 2,
+	CONCACAF_CHAMPIONS_LEAGUE: 16,
+	CONCACAF_GOLD_CUP: 22,
+	COPA_AMERICA: 9,
 	COPA_LIBERTADORES: 13,
 	COPA_SUDAMERICANA: 11,
-	// North/Central America - Domestic Leagues
-	MLS: 253,
-	LIGA_MX: 262,
-	// North/Central America - Continental Competitions
-	CONCACAF_CHAMPIONS_LEAGUE: 16,
-	// Asia - Domestic Leagues
-	SAUDI_PRO_LEAGUE: 307,
-	// Asia - Continental Competitions
-	AFC_CHAMPIONS_LEAGUE: 17,
-	// Africa - Continental Competitions
-	CAF_CHAMPIONS_LEAGUE: 12,
-	// International - World
-	WORLD_CUP: 1,
-	// International - Continental
-	COPA_AMERICA: 9,
 	EURO: 4,
-	AFRICA_CUP: 6,
-	ASIA_CUP: 7,
-	CONCACAF_GOLD_CUP: 22,
+	EUROPA_CONFERENCE_LEAGUE: 848,
+	EUROPA_LEAGUE: 3,
+	LA_LIGA: 140,
+	LIGA_MX: 262,
+	LIGUE_1: 61,
+	MLS: 253,
+	PREMIER_LEAGUE: 39,
+	SAUDI_PRO_LEAGUE: 307,
+	SERIE_A: 135,
+	WORLD_CUP: 1,
 } as const;
 
 // =============================================================================
@@ -381,203 +371,203 @@ export interface ContinentLeagues {
 }
 
 export const LEAGUES_BY_CONTINENT: Record<Continent, ContinentLeagues> = {
-	europe: {
-		name: 'Europe',
+	africa: {
 		emoji: '🌍',
 		leagues: [
 			{
-				id: POPULAR_LEAGUES.PREMIER_LEAGUE,
-				name: 'Premier League',
-				country: 'England',
-				emoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
-				type: 'clubs',
-			},
-			{
-				id: POPULAR_LEAGUES.LA_LIGA,
-				name: 'La Liga',
-				country: 'Spain',
-				emoji: '🇪🇸',
-				type: 'clubs',
-			},
-			{
-				id: POPULAR_LEAGUES.SERIE_A,
-				name: 'Serie A',
-				country: 'Italy',
-				emoji: '🇮🇹',
-				type: 'clubs',
-			},
-			{
-				id: POPULAR_LEAGUES.BUNDESLIGA,
-				name: 'Bundesliga',
-				country: 'Germany',
-				emoji: '🇩🇪',
-				type: 'clubs',
-			},
-			{
-				id: POPULAR_LEAGUES.LIGUE_1,
-				name: 'Ligue 1',
-				country: 'France',
-				emoji: '🇫🇷',
-				type: 'clubs',
-			},
-			{
-				id: POPULAR_LEAGUES.CHAMPIONS_LEAGUE,
-				name: 'Champions League',
-				country: 'UEFA',
+				country: 'CAF',
 				emoji: '🏆',
-				type: 'clubs',
-			},
-			{
-				id: POPULAR_LEAGUES.EUROPA_LEAGUE,
-				name: 'Europa League',
-				country: 'UEFA',
-				emoji: '🏆',
-				type: 'clubs',
-			},
-			{
-				id: POPULAR_LEAGUES.EUROPA_CONFERENCE_LEAGUE,
-				name: 'Conference League',
-				country: 'UEFA',
-				emoji: '🏆',
+				id: POPULAR_LEAGUES.CAF_CHAMPIONS_LEAGUE,
+				name: 'CAF Champions League',
 				type: 'clubs',
 			},
 		],
-	},
-	'south-america': {
-		name: 'South America',
-		emoji: '🌎',
-		leagues: [
-			{
-				id: POPULAR_LEAGUES.ARGENTINA_PRIMERA,
-				name: 'Liga Profesional',
-				country: 'Argentina',
-				emoji: '🇦🇷',
-				type: 'clubs',
-			},
-			{
-				id: POPULAR_LEAGUES.BRASIL_SERIE_A,
-				name: 'Brasileirão',
-				country: 'Brazil',
-				emoji: '🇧🇷',
-				type: 'clubs',
-			},
-			{
-				id: POPULAR_LEAGUES.COPA_LIBERTADORES,
-				name: 'Copa Libertadores',
-				country: 'CONMEBOL',
-				emoji: '🏆',
-				type: 'clubs',
-			},
-			{
-				id: POPULAR_LEAGUES.COPA_SUDAMERICANA,
-				name: 'Copa Sudamericana',
-				country: 'CONMEBOL',
-				emoji: '🏆',
-				type: 'clubs',
-			},
-		],
-	},
-	'north-america': {
-		name: 'North & Central America',
-		emoji: '🌎',
-		leagues: [
-			{ id: POPULAR_LEAGUES.MLS, name: 'MLS', country: 'USA', emoji: '🇺🇸', type: 'clubs' },
-			{
-				id: POPULAR_LEAGUES.LIGA_MX,
-				name: 'Liga MX',
-				country: 'Mexico',
-				emoji: '🇲🇽',
-				type: 'clubs',
-			},
-			{
-				id: POPULAR_LEAGUES.CONCACAF_CHAMPIONS_LEAGUE,
-				name: 'CONCACAF Champions Cup',
-				country: 'CONCACAF',
-				emoji: '🏆',
-				type: 'clubs',
-			},
-		],
+		name: 'Africa',
 	},
 	asia: {
-		name: 'Asia',
 		emoji: '🌏',
 		leagues: [
 			{
-				id: POPULAR_LEAGUES.SAUDI_PRO_LEAGUE,
-				name: 'Saudi Pro League',
 				country: 'Saudi Arabia',
 				emoji: '🇸🇦',
+				id: POPULAR_LEAGUES.SAUDI_PRO_LEAGUE,
+				name: 'Saudi Pro League',
 				type: 'clubs',
 			},
 			{
-				id: POPULAR_LEAGUES.AFC_CHAMPIONS_LEAGUE,
-				name: 'AFC Champions League',
 				country: 'AFC',
 				emoji: '🏆',
+				id: POPULAR_LEAGUES.AFC_CHAMPIONS_LEAGUE,
+				name: 'AFC Champions League',
 				type: 'clubs',
 			},
 		],
+		name: 'Asia',
 	},
-	africa: {
-		name: 'Africa',
+	europe: {
 		emoji: '🌍',
 		leagues: [
 			{
-				id: POPULAR_LEAGUES.CAF_CHAMPIONS_LEAGUE,
-				name: 'CAF Champions League',
-				country: 'CAF',
+				country: 'England',
+				emoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+				id: POPULAR_LEAGUES.PREMIER_LEAGUE,
+				name: 'Premier League',
+				type: 'clubs',
+			},
+			{
+				country: 'Spain',
+				emoji: '🇪🇸',
+				id: POPULAR_LEAGUES.LA_LIGA,
+				name: 'La Liga',
+				type: 'clubs',
+			},
+			{
+				country: 'Italy',
+				emoji: '🇮🇹',
+				id: POPULAR_LEAGUES.SERIE_A,
+				name: 'Serie A',
+				type: 'clubs',
+			},
+			{
+				country: 'Germany',
+				emoji: '🇩🇪',
+				id: POPULAR_LEAGUES.BUNDESLIGA,
+				name: 'Bundesliga',
+				type: 'clubs',
+			},
+			{
+				country: 'France',
+				emoji: '🇫🇷',
+				id: POPULAR_LEAGUES.LIGUE_1,
+				name: 'Ligue 1',
+				type: 'clubs',
+			},
+			{
+				country: 'UEFA',
 				emoji: '🏆',
+				id: POPULAR_LEAGUES.CHAMPIONS_LEAGUE,
+				name: 'Champions League',
+				type: 'clubs',
+			},
+			{
+				country: 'UEFA',
+				emoji: '🏆',
+				id: POPULAR_LEAGUES.EUROPA_LEAGUE,
+				name: 'Europa League',
+				type: 'clubs',
+			},
+			{
+				country: 'UEFA',
+				emoji: '🏆',
+				id: POPULAR_LEAGUES.EUROPA_CONFERENCE_LEAGUE,
+				name: 'Conference League',
 				type: 'clubs',
 			},
 		],
+		name: 'Europe',
 	},
 	international: {
-		name: 'International',
 		emoji: '🌐',
 		leagues: [
 			{
-				id: POPULAR_LEAGUES.WORLD_CUP,
-				name: 'World Cup',
 				country: 'FIFA',
 				emoji: '🏆',
+				id: POPULAR_LEAGUES.WORLD_CUP,
+				name: 'World Cup',
 				type: 'national',
 			},
 			{
-				id: POPULAR_LEAGUES.EURO,
-				name: 'Euro',
 				country: 'UEFA',
 				emoji: '🏆',
+				id: POPULAR_LEAGUES.EURO,
+				name: 'Euro',
 				type: 'national',
 			},
 			{
-				id: POPULAR_LEAGUES.COPA_AMERICA,
-				name: 'Copa América',
 				country: 'CONMEBOL',
 				emoji: '🏆',
+				id: POPULAR_LEAGUES.COPA_AMERICA,
+				name: 'Copa América',
 				type: 'national',
 			},
 			{
-				id: POPULAR_LEAGUES.AFRICA_CUP,
-				name: 'Africa Cup of Nations',
 				country: 'CAF',
 				emoji: '🏆',
+				id: POPULAR_LEAGUES.AFRICA_CUP,
+				name: 'Africa Cup of Nations',
 				type: 'national',
 			},
 			{
-				id: POPULAR_LEAGUES.ASIA_CUP,
-				name: 'AFC Asian Cup',
 				country: 'AFC',
 				emoji: '🏆',
+				id: POPULAR_LEAGUES.ASIA_CUP,
+				name: 'AFC Asian Cup',
 				type: 'national',
 			},
 			{
-				id: POPULAR_LEAGUES.CONCACAF_GOLD_CUP,
-				name: 'CONCACAF Gold Cup',
 				country: 'CONCACAF',
 				emoji: '🏆',
+				id: POPULAR_LEAGUES.CONCACAF_GOLD_CUP,
+				name: 'CONCACAF Gold Cup',
 				type: 'national',
 			},
 		],
+		name: 'International',
+	},
+	'north-america': {
+		emoji: '🌎',
+		leagues: [
+			{ country: 'USA', emoji: '🇺🇸', id: POPULAR_LEAGUES.MLS, name: 'MLS', type: 'clubs' },
+			{
+				country: 'Mexico',
+				emoji: '🇲🇽',
+				id: POPULAR_LEAGUES.LIGA_MX,
+				name: 'Liga MX',
+				type: 'clubs',
+			},
+			{
+				country: 'CONCACAF',
+				emoji: '🏆',
+				id: POPULAR_LEAGUES.CONCACAF_CHAMPIONS_LEAGUE,
+				name: 'CONCACAF Champions Cup',
+				type: 'clubs',
+			},
+		],
+		name: 'North & Central America',
+	},
+	'south-america': {
+		emoji: '🌎',
+		leagues: [
+			{
+				country: 'Argentina',
+				emoji: '🇦🇷',
+				id: POPULAR_LEAGUES.ARGENTINA_PRIMERA,
+				name: 'Liga Profesional',
+				type: 'clubs',
+			},
+			{
+				country: 'Brazil',
+				emoji: '🇧🇷',
+				id: POPULAR_LEAGUES.BRASIL_SERIE_A,
+				name: 'Brasileirão',
+				type: 'clubs',
+			},
+			{
+				country: 'CONMEBOL',
+				emoji: '🏆',
+				id: POPULAR_LEAGUES.COPA_LIBERTADORES,
+				name: 'Copa Libertadores',
+				type: 'clubs',
+			},
+			{
+				country: 'CONMEBOL',
+				emoji: '🏆',
+				id: POPULAR_LEAGUES.COPA_SUDAMERICANA,
+				name: 'Copa Sudamericana',
+				type: 'clubs',
+			},
+		],
+		name: 'South America',
 	},
 };
 

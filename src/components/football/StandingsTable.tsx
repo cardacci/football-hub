@@ -21,37 +21,37 @@ export function StandingsTable({ standings, leagueName }: StandingsTableProps) {
 			<table className="w-full text-left text-sm">
 				<thead className="bg-gray-100 text-xs text-gray-700 uppercase dark:bg-gray-800 dark:text-gray-400">
 					<tr>
-						<th scope="col" className="w-12 px-4 py-3">
+						<th className="w-12 px-4 py-3" scope="col">
 							#
 						</th>
-						<th scope="col" className="px-4 py-3">
+						<th className="px-4 py-3" scope="col">
 							Team
 						</th>
-						<th scope="col" className="px-4 py-3 text-center">
+						<th className="px-4 py-3 text-center" scope="col">
 							P
 						</th>
-						<th scope="col" className="px-4 py-3 text-center">
+						<th className="px-4 py-3 text-center" scope="col">
 							W
 						</th>
-						<th scope="col" className="px-4 py-3 text-center">
+						<th className="px-4 py-3 text-center" scope="col">
 							D
 						</th>
-						<th scope="col" className="px-4 py-3 text-center">
+						<th className="px-4 py-3 text-center" scope="col">
 							L
 						</th>
-						<th scope="col" className="px-4 py-3 text-center">
+						<th className="px-4 py-3 text-center" scope="col">
 							GF
 						</th>
-						<th scope="col" className="px-4 py-3 text-center">
+						<th className="px-4 py-3 text-center" scope="col">
 							GA
 						</th>
-						<th scope="col" className="px-4 py-3 text-center">
+						<th className="px-4 py-3 text-center" scope="col">
 							GD
 						</th>
-						<th scope="col" className="px-4 py-3 text-center font-bold">
+						<th className="px-4 py-3 text-center font-bold" scope="col">
 							Pts
 						</th>
-						<th scope="col" className="px-4 py-3 text-center">
+						<th className="px-4 py-3 text-center" scope="col">
 							Form
 						</th>
 					</tr>
@@ -78,11 +78,11 @@ export function StandingsTable({ standings, leagueName }: StandingsTableProps) {
 							<td className="px-4 py-3">
 								<div className="flex items-center gap-3">
 									<Image
-										src={team.team.logo}
 										alt={team.team.name}
-										width={24}
-										height={24}
 										className="object-contain"
+										height={24}
+										src={team.team.logo}
+										width={24}
 									/>
 									<span className="font-medium text-gray-900 dark:text-white">
 										{team.team.name}

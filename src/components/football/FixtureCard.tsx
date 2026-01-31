@@ -20,9 +20,9 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 	const formatDate = (dateString: string) => {
 		const date = new Date(dateString);
 		return date.toLocaleDateString('en-US', {
-			weekday: 'short',
-			month: 'short',
 			day: 'numeric',
+			month: 'short',
+			weekday: 'short',
 		});
 	};
 
@@ -39,11 +39,11 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 			{/* League Info */}
 			<div className="mb-3 flex items-center gap-2 border-b border-gray-100 pb-2 dark:border-gray-700">
 				<Image
-					src={fixture.league.logo}
 					alt={fixture.league.name}
-					width={20}
-					height={20}
 					className="object-contain"
+					height={20}
+					src={fixture.league.logo}
+					width={20}
 				/>
 				<span className="text-xs text-gray-500 dark:text-gray-400">
 					{fixture.league.name} • {fixture.league.round}
@@ -77,11 +77,11 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 				<div className="flex-1 text-center">
 					<div className="flex flex-col items-center gap-2">
 						<Image
-							src={fixture.teams.home.logo}
 							alt={fixture.teams.home.name}
-							width={48}
-							height={48}
 							className="object-contain"
+							height={48}
+							src={fixture.teams.home.logo}
+							width={48}
 						/>
 						<span className="line-clamp-2 text-sm font-medium text-gray-900 dark:text-white">
 							{fixture.teams.home.name}
@@ -116,11 +116,11 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 				<div className="flex-1 text-center">
 					<div className="flex flex-col items-center gap-2">
 						<Image
-							src={fixture.teams.away.logo}
 							alt={fixture.teams.away.name}
-							width={48}
-							height={48}
 							className="object-contain"
+							height={48}
+							src={fixture.teams.away.logo}
+							width={48}
 						/>
 						<span className="line-clamp-2 text-sm font-medium text-gray-900 dark:text-white">
 							{fixture.teams.away.name}

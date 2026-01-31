@@ -70,12 +70,12 @@ export function calculateTitlesCount(history: CompetitionHistory): Array<{
 
 	history.editions.forEach((edition) => {
 		if (!stats[edition.winner]) {
-			stats[edition.winner] = { titles: 0, runnerUps: 0 };
+			stats[edition.winner] = { runnerUps: 0, titles: 0 };
 		}
 		stats[edition.winner].titles++;
 
 		if (!stats[edition.runnerUp]) {
-			stats[edition.runnerUp] = { titles: 0, runnerUps: 0 };
+			stats[edition.runnerUp] = { runnerUps: 0, titles: 0 };
 		}
 		stats[edition.runnerUp].runnerUps++;
 	});
@@ -83,8 +83,8 @@ export function calculateTitlesCount(history: CompetitionHistory): Array<{
 	return Object.entries(stats)
 		.map(([name, data]) => ({
 			name,
-			titles: data.titles,
 			runnerUps: data.runnerUps,
+			titles: data.titles,
 			total: data.titles + data.runnerUps,
 		}))
 		.sort((a, b) => b.titles - a.titles || b.runnerUps - a.runnerUps);

@@ -13,12 +13,12 @@ export function LeagueCard({ league, variant = 'clubs' }: LeagueCardProps) {
 
 	return (
 		<Link
-			href={`/leagues/${league.league.id}`}
 			className={`group relative block overflow-hidden rounded-2xl p-[1px] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
 				isNational
 					? 'bg-gradient-to-br from-amber-400 via-orange-500 to-red-500'
 					: 'bg-gradient-to-br from-blue-400 via-cyan-500 to-teal-500'
 			}`}
+			href={`/leagues/${league.league.id}`}
 		>
 			<div className="group-hover:bg-opacity-95 dark:group-hover:bg-opacity-95 relative h-full rounded-2xl bg-white p-6 transition-all duration-300 dark:bg-gray-800">
 				{/* Glow effect */}
@@ -38,10 +38,10 @@ export function LeagueCard({ league, variant = 'clubs' }: LeagueCardProps) {
 						}`}
 					>
 						<Image
-							src={league.league.logo}
-							alt={league.league.name}
 							fill
+							alt={league.league.name}
 							className="object-contain p-1"
+							src={league.league.logo}
 						/>
 					</div>
 
@@ -53,11 +53,11 @@ export function LeagueCard({ league, variant = 'clubs' }: LeagueCardProps) {
 						<div className="mt-1 flex items-center gap-2">
 							{league.country.flag && (
 								<Image
-									src={league.country.flag}
 									alt={league.country.name}
-									width={20}
-									height={14}
 									className="rounded object-contain"
+									height={14}
+									src={league.country.flag}
+									width={20}
 								/>
 							)}
 							<span className="text-sm text-gray-500 dark:text-gray-400">
@@ -90,10 +90,10 @@ export function LeagueCard({ league, variant = 'clubs' }: LeagueCardProps) {
 							viewBox="0 0 24 24"
 						>
 							<path
+								d="M9 5l7 7-7 7"
 								strokeLinecap="round"
 								strokeLinejoin="round"
 								strokeWidth={2}
-								d="M9 5l7 7-7 7"
 							/>
 						</svg>
 					</div>

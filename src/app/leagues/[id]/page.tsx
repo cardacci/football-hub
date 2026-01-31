@@ -97,8 +97,8 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 
 				<div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
 					<Link
-						href="/"
 						className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white/30"
+						href="/"
 					>
 						<svg
 							className="h-4 w-4"
@@ -107,10 +107,10 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 							viewBox="0 0 24 24"
 						>
 							<path
+								d="M15 19l-7-7 7-7"
 								strokeLinecap="round"
 								strokeLinejoin="round"
 								strokeWidth={2}
-								d="M15 19l-7-7 7-7"
 							/>
 						</svg>
 						Back to Home
@@ -145,8 +145,8 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 				<div className="mb-8 flex flex-wrap gap-4">
 					{!isNational && (
 						<a
-							href="#standings"
 							className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-semibold text-gray-700 shadow-md transition-all hover:shadow-lg dark:bg-gray-800 dark:text-gray-200"
+							href="#standings"
 						>
 							📊 Current Standings
 						</a>
@@ -154,14 +154,14 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 					{competitionHistory && (
 						<>
 							<a
-								href="#history"
 								className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-semibold text-gray-700 shadow-md transition-all hover:shadow-lg dark:bg-gray-800 dark:text-gray-200"
+								href="#history"
 							>
 								📅 Edition History
 							</a>
 							<a
-								href="#titles"
 								className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-semibold text-gray-700 shadow-md transition-all hover:shadow-lg dark:bg-gray-800 dark:text-gray-200"
+								href="#titles"
 							>
 								🏆 Titles Ranking
 							</a>
@@ -169,8 +169,8 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 					)}
 					{seasons.length > 0 && (
 						<a
-							href="#seasons"
 							className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-semibold text-gray-700 shadow-md transition-all hover:shadow-lg dark:bg-gray-800 dark:text-gray-200"
+							href="#seasons"
 						>
 							📆 Available Seasons
 						</a>
@@ -179,7 +179,7 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 
 				{/* Available Seasons */}
 				{seasons.length > 0 && (
-					<section id="seasons" className="mb-10">
+					<section className="mb-10" id="seasons">
 						<div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
 							<h2 className="mb-4 flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
 								<span>📆</span> Available Seasons/Editions
@@ -213,7 +213,7 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 
 				{/* Current Standings (only for club competitions) */}
 				{!isNational && (
-					<section id="standings" className="mb-10">
+					<section className="mb-10" id="standings">
 						<h2 className="mb-4 flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
 							<span>📊</span> Current Standings ({CURRENT_SEASON}/{CURRENT_SEASON + 1}
 							)
@@ -231,10 +231,10 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 									<li>
 										Get a free API key from{' '}
 										<a
-											href="https://rapidapi.com/api-sports/api/api-football"
 											className="underline hover:no-underline"
-											target="_blank"
+											href="https://rapidapi.com/api-sports/api/api-football"
 											rel="noopener noreferrer"
+											target="_blank"
 										>
 											RapidAPI
 										</a>
@@ -269,7 +269,7 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 				{competitionHistory && (
 					<>
 						{/* Titles Ranking */}
-						<section id="titles" className="mb-10">
+						<section className="mb-10" id="titles">
 							<h2 className="mb-4 flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
 								<span>🏆</span> All-Time Titles Ranking
 							</h2>
@@ -351,7 +351,7 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 						</section>
 
 						{/* Edition History */}
-						<section id="history" className="mb-10">
+						<section className="mb-10" id="history">
 							<h2 className="mb-4 flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
 								<span>📅</span> Edition History
 							</h2>
