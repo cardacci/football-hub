@@ -7,6 +7,7 @@ export default function Home() {
 		'south-america',
 		'north-america',
 		'asia',
+		'africa',
 		'international',
 	];
 
@@ -62,41 +63,123 @@ export default function Home() {
 			{/* Featured Leagues */}
 			<main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
 				<section className="mb-16">
-					<h2 className="mb-8 text-center text-3xl font-bold text-gray-900 dark:text-white">
+					<h2 className="mb-12 text-center text-3xl font-bold text-gray-900 dark:text-white">
 						Leagues by Continent
 					</h2>
 
-					<div className="space-y-12">
+					{/* Legend */}
+					<div className="mb-8 flex flex-wrap items-center justify-center gap-6">
+						<div className="flex items-center gap-2">
+							<span className="inline-flex h-3 w-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500"></span>
+							<span className="text-sm text-gray-600 dark:text-gray-400">
+								Club Competitions
+							</span>
+						</div>
+						<div className="flex items-center gap-2">
+							<span className="inline-flex h-3 w-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500"></span>
+							<span className="text-sm text-gray-600 dark:text-gray-400">
+								National Team Competitions
+							</span>
+						</div>
+					</div>
+
+					<div className="space-y-16">
 						{continentOrder.map((continentKey) => {
 							const continent = LEAGUES_BY_CONTINENT[continentKey];
 							return (
 								<div key={continentKey}>
-									<h3 className="mb-4 flex items-center gap-2 text-xl font-semibold text-gray-800 dark:text-gray-200">
-										<span className="text-2xl">{continent.emoji}</span>
-										{continent.name}
-									</h3>
-									<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-										{continent.leagues.map((league) => (
-											<Link
-												key={league.id}
-												href={`/leagues/${league.id}`}
-												className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-green-500 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:border-green-500"
-											>
-												<div className="flex items-center gap-4">
-													<span className="text-4xl">{league.emoji}</span>
+									<div className="mb-6 flex items-center gap-3">
+										<span className="text-3xl">{continent.emoji}</span>
+										<h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+											{continent.name}
+										</h3>
+										<div className="h-px flex-1 bg-gradient-to-r from-gray-200 to-transparent dark:from-gray-700"></div>
+									</div>
+									<div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+										{continent.leagues.map((league) => {
+											const isNational = league.type === 'national';
+											return (
+												<Link
+													key={league.id}
+													href={`/leagues/${league.id}`}
+													className={`group relative overflow-hidden rounded-2xl p-[1px] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
+														isNational
+															? 'bg-gradient-to-br from-amber-400 via-orange-500 to-red-500'
+															: 'bg-gradient-to-br from-blue-400 via-cyan-500 to-teal-500'
+													}`}
+												>
+													<div className="group-hover:bg-opacity-95 dark:group-hover:bg-opacity-95 relative h-full rounded-2xl bg-white p-5 transition-all duration-300 dark:bg-gray-800">
+														{/* Glow effect */}
+														<div
+															className={`absolute -top-8 -right-8 h-24 w-24 rounded-full opacity-20 blur-2xl transition-opacity duration-300 group-hover:opacity-40 ${
+																isNational
+																	? 'bg-amber-500'
+																	: 'bg-blue-500'
+															}`}
+														></div>
 
-													<div>
-														<h4 className="text-xl font-bold text-gray-900 transition-colors group-hover:text-green-600 dark:text-white dark:group-hover:text-green-400">
-															{league.name}
-														</h4>
+														<div className="relative flex items-center gap-4">
+															{/* Emoji with animated background */}
+															<div
+																className={`flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl text-3xl transition-transform duration-300 group-hover:scale-110 ${
+																	isNational
+																		? 'bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30'
+																		: 'bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30'
+																}`}
+															>
+																{league.emoji}
+															</div>
 
-														<p className="text-gray-500 dark:text-gray-400">
-															{league.country}
-														</p>
+															<div className="min-w-0 flex-1">
+																<h4 className="truncate text-lg font-bold text-gray-900 transition-colors group-hover:text-gray-700 dark:text-white dark:group-hover:text-gray-100">
+																	{league.name}
+																</h4>
+
+																<div className="mt-1 flex items-center gap-2">
+																	<p className="text-sm text-gray-500 dark:text-gray-400">
+																		{league.country}
+																	</p>
+																	<span
+																		className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase ${
+																			isNational
+																				? 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400'
+																				: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-400'
+																		}`}
+																	>
+																		{isNational
+																			? '🏳️ Nations'
+																			: '⚽ Clubs'}
+																	</span>
+																</div>
+															</div>
+
+															{/* Arrow */}
+															<div
+																className={`transition-all duration-300 group-hover:translate-x-1 ${
+																	isNational
+																		? 'text-amber-400'
+																		: 'text-blue-400'
+																}`}
+															>
+																<svg
+																	className="h-5 w-5"
+																	fill="none"
+																	stroke="currentColor"
+																	viewBox="0 0 24 24"
+																>
+																	<path
+																		strokeLinecap="round"
+																		strokeLinejoin="round"
+																		strokeWidth={2}
+																		d="M9 5l7 7-7 7"
+																	/>
+																</svg>
+															</div>
+														</div>
 													</div>
-												</div>
-											</Link>
-										))}
+												</Link>
+											);
+										})}
 									</div>
 								</div>
 							);
