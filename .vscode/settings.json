@@ -1,9 +1,27 @@
 {
+	// ============================================
+	// Editor Settings
+	// ============================================
 	"editor.tabSize": 4,
 	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "never"
+	},
+
+	// ============================================
+	// ESLint Settings
+	// ============================================
+	"eslint.enable": true,
+	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+	"eslint.useFlatConfig": true,
+
+	// ============================================
+	// TypeScript/JavaScript Settings
+	// ============================================
 	"[typescript]": {
 		"editor.tabSize": 4,
 		"editor.insertSpaces": false,
@@ -24,6 +42,10 @@
 		"editor.insertSpaces": false,
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
+
+	// ============================================
+	// JSON Settings
+	// ============================================
 	"[json]": {
 		"editor.tabSize": 4,
 		"editor.insertSpaces": false,
@@ -34,6 +56,10 @@
 		"editor.insertSpaces": false,
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
+
+	// ============================================
+	// Other File Types
+	// ============================================
 	"[css]": {
 		"editor.tabSize": 4,
 		"editor.insertSpaces": false,
@@ -47,5 +73,25 @@
 	"[markdown]": {
 		"editor.tabSize": 4,
 		"editor.insertSpaces": false
-	}
+	},
+
+	// ============================================
+	// File Associations
+	// ============================================
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+
+	// ============================================
+	// Tailwind CSS IntelliSense
+	// ============================================
+	"tailwindCSS.includeLanguages": {
+		"typescript": "javascript",
+		"typescriptreact": "javascript"
+	},
+	"tailwindCSS.experimental.classRegex": [
+		["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+		["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+		["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+	]
 }

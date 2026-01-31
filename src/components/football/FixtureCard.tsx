@@ -1,4 +1,4 @@
-import { Fixture } from '@/lib/api';
+import { type Fixture } from '@/lib/api';
 import Image from 'next/image';
 
 interface FixtureCardProps {
@@ -35,9 +35,9 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 	};
 
 	return (
-		<div className="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow p-4 border border-gray-100 dark:border-gray-700">
+		<div className="rounded-xl border border-gray-100 bg-white p-4 shadow-md transition-shadow hover:shadow-lg dark:border-gray-700 dark:bg-gray-800">
 			{/* League Info */}
-			<div className="flex items-center gap-2 mb-3 pb-2 border-b border-gray-100 dark:border-gray-700">
+			<div className="mb-3 flex items-center gap-2 border-b border-gray-100 pb-2 dark:border-gray-700">
 				<Image
 					src={fixture.league.logo}
 					alt={fixture.league.name}
@@ -51,14 +51,14 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 			</div>
 
 			{/* Match Status */}
-			<div className="text-center mb-3">
+			<div className="mb-3 text-center">
 				{isLive ? (
-					<span className="inline-flex items-center gap-1 px-2 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-semibold rounded-full">
-						<span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+					<span className="inline-flex items-center gap-1 rounded-full bg-red-100 px-2 py-1 text-xs font-semibold text-red-600 dark:bg-red-900/30 dark:text-red-400">
+						<span className="h-2 w-2 animate-pulse rounded-full bg-red-500" />
 						LIVE {fixture.fixture.status.elapsed}&apos;
 					</span>
 				) : isFinished ? (
-					<span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+					<span className="text-xs font-medium text-gray-500 dark:text-gray-400">
 						Full Time
 					</span>
 				) : (
@@ -83,7 +83,7 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 							height={48}
 							className="object-contain"
 						/>
-						<span className="text-sm font-medium text-gray-900 dark:text-white line-clamp-2">
+						<span className="line-clamp-2 text-sm font-medium text-gray-900 dark:text-white">
 							{fixture.teams.home.name}
 						</span>
 					</div>
@@ -122,7 +122,7 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 							height={48}
 							className="object-contain"
 						/>
-						<span className="text-sm font-medium text-gray-900 dark:text-white line-clamp-2">
+						<span className="line-clamp-2 text-sm font-medium text-gray-900 dark:text-white">
 							{fixture.teams.away.name}
 						</span>
 					</div>
@@ -131,7 +131,7 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 
 			{/* Venue */}
 			{fixture.fixture.venue.name && (
-				<div className="mt-3 pt-2 border-t border-gray-100 dark:border-gray-700 text-center">
+				<div className="mt-3 border-t border-gray-100 pt-2 text-center dark:border-gray-700">
 					<span className="text-xs text-gray-400">
 						📍 {fixture.fixture.venue.name}, {fixture.fixture.venue.city}
 					</span>

@@ -1,4 +1,4 @@
-import { Standing } from '@/lib/api';
+import { type Standing } from '@/lib/api';
 import Image from 'next/image';
 
 interface StandingsTableProps {
@@ -8,20 +8,20 @@ interface StandingsTableProps {
 
 export function StandingsTable({ standings, leagueName }: StandingsTableProps) {
 	if (standings.length === 0) {
-		return <div className="text-center py-8 text-gray-500">No standings data available</div>;
+		return <div className="py-8 text-center text-gray-500">No standings data available</div>;
 	}
 
 	return (
 		<div className="overflow-x-auto">
 			{leagueName && (
-				<h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">
+				<h2 className="mb-4 text-2xl font-bold text-gray-800 dark:text-white">
 					{leagueName}
 				</h2>
 			)}
-			<table className="w-full text-sm text-left">
-				<thead className="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-800 dark:text-gray-400">
+			<table className="w-full text-left text-sm">
+				<thead className="bg-gray-100 text-xs text-gray-700 uppercase dark:bg-gray-800 dark:text-gray-400">
 					<tr>
-						<th scope="col" className="px-4 py-3 w-12">
+						<th scope="col" className="w-12 px-4 py-3">
 							#
 						</th>
 						<th scope="col" className="px-4 py-3">
@@ -60,16 +60,16 @@ export function StandingsTable({ standings, leagueName }: StandingsTableProps) {
 					{standings.map((team) => (
 						<tr
 							key={team.team.id}
-							className="bg-white border-b dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+							className="border-b bg-white transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-900 dark:hover:bg-gray-800"
 						>
 							<td className="px-4 py-3 font-medium">
 								<span
-									className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${
+									className={`inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold ${
 										team.rank <= 4
 											? 'bg-green-500 text-white'
 											: team.rank >= standings.length - 2
 												? 'bg-red-500 text-white'
-												: 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+												: 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
 									}`}
 								>
 									{team.rank}
@@ -117,11 +117,11 @@ export function StandingsTable({ standings, leagueName }: StandingsTableProps) {
 								{team.points}
 							</td>
 							<td className="px-4 py-3">
-								<div className="flex gap-1 justify-center">
+								<div className="flex justify-center gap-1">
 									{team.form?.split('').map((result, index) => (
 										<span
 											key={index}
-											className={`w-5 h-5 flex items-center justify-center rounded text-xs font-bold text-white ${
+											className={`flex h-5 w-5 items-center justify-center rounded text-xs font-bold text-white ${
 												result === 'W'
 													? 'bg-green-500'
 													: result === 'D'

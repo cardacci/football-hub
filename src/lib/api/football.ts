@@ -195,10 +195,17 @@ export interface APIResponse<T> {
  */
 export async function getLeagues(country?: string, season?: number): Promise<League[]> {
 	const params: Record<string, string> = {};
-	if (country) params.country = country;
-	if (season) params.season = season.toString();
+
+	if (country) {
+		params.country = country;
+	}
+
+	if (season) {
+		params.season = season.toString();
+	}
 
 	const data = await fetchFromAPI<APIResponse<League[]>>('/leagues', params);
+
 	return data.response;
 }
 
@@ -263,15 +270,33 @@ export async function getFixtures(options: {
 }): Promise<Fixture[]> {
 	const params: Record<string, string> = {};
 
-	if (options.leagueId) params.league = options.leagueId.toString();
-	if (options.season) params.season = options.season.toString();
-	if (options.teamId) params.team = options.teamId.toString();
-	if (options.date) params.date = options.date;
-	if (options.from) params.from = options.from;
-	if (options.to) params.to = options.to;
-	if (options.status) params.status = options.status;
-	if (options.last) params.last = options.last.toString();
-	if (options.next) params.next = options.next.toString();
+	if (options.leagueId) {
+		params.league = options.leagueId.toString();
+	}
+	if (options.season) {
+		params.season = options.season.toString();
+	}
+	if (options.teamId) {
+		params.team = options.teamId.toString();
+	}
+	if (options.date) {
+		params.date = options.date;
+	}
+	if (options.from) {
+		params.from = options.from;
+	}
+	if (options.to) {
+		params.to = options.to;
+	}
+	if (options.status) {
+		params.status = options.status;
+	}
+	if (options.last) {
+		params.last = options.last.toString();
+	}
+	if (options.next) {
+		params.next = options.next.toString();
+	}
 
 	const data = await fetchFromAPI<APIResponse<Fixture[]>>('/fixtures', params);
 	return data.response;

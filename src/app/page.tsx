@@ -25,24 +25,28 @@ export default function Home() {
 		<div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-900 dark:to-gray-800">
 			{/* Hero Section */}
 			<header className="relative overflow-hidden">
-				<div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 opacity-90"></div>
-				<div className="absolute inset-0 bg-[url('/stadium-pattern.png')] opacity-10"></div>
-				<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-					<h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
+				<div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 opacity-90" />
+
+				<div className="absolute inset-0 bg-[url('/stadium-pattern.png')] opacity-10" />
+
+				<div className="relative mx-auto max-w-7xl px-4 py-24 text-center sm:px-6 lg:px-8">
+					<h1 className="mb-6 text-5xl font-extrabold tracking-tight text-white md:text-6xl">
 						⚽ Football Hub
 					</h1>
-					<p className="text-xl md:text-2xl text-green-100 max-w-2xl mx-auto mb-8">
+
+					<p className="mx-auto mb-8 max-w-2xl text-xl text-green-100 md:text-2xl">
 						Your gateway to real-time football data. Explore leagues, standings,
 						fixtures, and more!
 					</p>
-					<div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+					<div className="flex flex-col justify-center gap-4 sm:flex-row">
 						<Link
 							href="/leagues"
-							className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-green-700 bg-white rounded-full hover:bg-green-50 transition-colors shadow-lg hover:shadow-xl"
+							className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-green-700 shadow-lg transition-colors hover:bg-green-50 hover:shadow-xl"
 						>
 							Explore Leagues
 							<svg
-								className="ml-2 w-5 h-5"
+								className="ml-2 h-5 w-5"
 								fill="none"
 								stroke="currentColor"
 								viewBox="0 0 24 24"
@@ -55,9 +59,10 @@ export default function Home() {
 								/>
 							</svg>
 						</Link>
+
 						<Link
 							href="/fixtures"
-							className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white rounded-full hover:bg-white/10 transition-colors"
+							className="inline-flex items-center justify-center rounded-full border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-white/10"
 						>
 							View Fixtures
 						</Link>
@@ -66,24 +71,27 @@ export default function Home() {
 			</header>
 
 			{/* Featured Leagues */}
-			<main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+			<main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
 				<section className="mb-16">
-					<h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+					<h2 className="mb-8 text-center text-3xl font-bold text-gray-900 dark:text-white">
 						Top Leagues
 					</h2>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+					<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 						{featuredLeagues.map((league) => (
 							<Link
 								key={league.id}
 								href={`/leagues/${league.id}`}
-								className="group bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-500 hover:-translate-y-1"
+								className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-green-500 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:border-green-500"
 							>
 								<div className="flex items-center gap-4">
 									<span className="text-4xl">{league.emoji}</span>
+
 									<div>
-										<h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+										<h3 className="text-xl font-bold text-gray-900 transition-colors group-hover:text-green-600 dark:text-white dark:group-hover:text-green-400">
 											{league.name}
 										</h3>
+
 										<p className="text-gray-500 dark:text-gray-400">
 											{league.country}
 										</p>
@@ -96,37 +104,40 @@ export default function Home() {
 
 				{/* Features Section */}
 				<section className="mb-16">
-					<h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+					<h2 className="mb-8 text-center text-3xl font-bold text-gray-900 dark:text-white">
 						Features
 					</h2>
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-						<div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md text-center">
-							<div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+
+					<div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+						<div className="rounded-2xl bg-white p-8 text-center shadow-md dark:bg-gray-800">
+							<div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30">
 								<span className="text-3xl">📊</span>
 							</div>
-							<h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+
+							<h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
 								Live Standings
 							</h3>
+
 							<p className="text-gray-500 dark:text-gray-400">
 								Real-time league tables with complete statistics
 							</p>
 						</div>
-						<div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md text-center">
-							<div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+						<div className="rounded-2xl bg-white p-8 text-center shadow-md dark:bg-gray-800">
+							<div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30">
 								<span className="text-3xl">📅</span>
 							</div>
-							<h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+							<h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
 								Match Fixtures
 							</h3>
 							<p className="text-gray-500 dark:text-gray-400">
 								Upcoming matches and live scores from top leagues
 							</p>
 						</div>
-						<div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md text-center">
-							<div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+						<div className="rounded-2xl bg-white p-8 text-center shadow-md dark:bg-gray-800">
+							<div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/30">
 								<span className="text-3xl">🏟️</span>
 							</div>
-							<h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+							<h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
 								Team Info
 							</h3>
 							<p className="text-gray-500 dark:text-gray-400">
@@ -137,9 +148,9 @@ export default function Home() {
 				</section>
 
 				{/* API Info */}
-				<section className="bg-gray-900 dark:bg-gray-800 rounded-2xl p-8 text-center">
-					<h2 className="text-2xl font-bold text-white mb-4">Powered by Real Data</h2>
-					<p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+				<section className="rounded-2xl bg-gray-900 p-8 text-center dark:bg-gray-800">
+					<h2 className="mb-4 text-2xl font-bold text-white">Powered by Real Data</h2>
+					<p className="mx-auto mb-6 max-w-2xl text-gray-300">
 						This project uses the API-Football service to fetch real football data. To
 						use the API features, you&apos;ll need to configure your API key.
 					</p>
@@ -147,11 +158,11 @@ export default function Home() {
 						href="https://rapidapi.com/api-sports/api/api-football"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition-colors"
+						className="inline-flex items-center gap-2 rounded-full bg-green-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-green-700"
 					>
 						Get API Key
 						<svg
-							className="w-4 h-4"
+							className="h-4 w-4"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
@@ -168,8 +179,8 @@ export default function Home() {
 			</main>
 
 			{/* Footer */}
-			<footer className="border-t border-gray-200 dark:border-gray-700 mt-16">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-gray-500 dark:text-gray-400">
+			<footer className="mt-16 border-t border-gray-200 dark:border-gray-700">
+				<div className="mx-auto max-w-7xl px-4 py-8 text-center text-gray-500 sm:px-6 lg:px-8 dark:text-gray-400">
 					<p>
 						Built with{' '}
 						<a

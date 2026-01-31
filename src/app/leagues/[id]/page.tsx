@@ -38,13 +38,13 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 		<div className="min-h-screen bg-gray-50 dark:bg-gray-900">
 			{/* Header */}
 			<header className="bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+				<div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
 					<Link
 						href="/"
-						className="inline-flex items-center gap-2 text-green-100 hover:text-white mb-4 transition-colors"
+						className="mb-4 inline-flex items-center gap-2 text-green-100 transition-colors hover:text-white"
 					>
 						<svg
-							className="w-5 h-5"
+							className="h-5 w-5"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
@@ -59,23 +59,23 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 						Back to Home
 					</Link>
 					<h1 className="text-4xl font-bold">{leagueName}</h1>
-					<p className="text-green-100 mt-2">
+					<p className="mt-2 text-green-100">
 						Season {CURRENT_SEASON}/{CURRENT_SEASON + 1}
 					</p>
 				</div>
 			</header>
 
 			{/* Content */}
-			<main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+			<main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
 				{error ? (
-					<div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-6">
-						<h2 className="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+					<div className="rounded-xl border border-yellow-200 bg-yellow-50 p-6 dark:border-yellow-800 dark:bg-yellow-900/20">
+						<h2 className="mb-2 text-lg font-semibold text-yellow-800 dark:text-yellow-200">
 							⚠️ API Configuration Required
 						</h2>
-						<p className="text-yellow-700 dark:text-yellow-300 mb-4">
+						<p className="mb-4 text-yellow-700 dark:text-yellow-300">
 							To display real standings data, you need to configure your API key:
 						</p>
-						<ol className="list-decimal list-inside text-yellow-700 dark:text-yellow-300 space-y-2">
+						<ol className="list-inside list-decimal space-y-2 text-yellow-700 dark:text-yellow-300">
 							<li>
 								Get a free API key from{' '}
 								<a
@@ -89,25 +89,25 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 							</li>
 							<li>
 								Add it to your{' '}
-								<code className="bg-yellow-200 dark:bg-yellow-800 px-1 rounded">
+								<code className="rounded bg-yellow-200 px-1 dark:bg-yellow-800">
 									.env.local
 								</code>{' '}
 								file
 							</li>
 							<li>Restart the development server</li>
 						</ol>
-						<p className="text-yellow-600 dark:text-yellow-400 mt-4 text-sm">
+						<p className="mt-4 text-sm text-yellow-600 dark:text-yellow-400">
 							Error: {error}
 						</p>
 					</div>
 				) : standings && standings.length > 0 ? (
-					<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+					<div className="overflow-hidden rounded-xl bg-white shadow-lg dark:bg-gray-800">
 						<div className="p-6">
 							<StandingsTable standings={standings} />
 						</div>
 					</div>
 				) : (
-					<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 text-center">
+					<div className="rounded-xl bg-white p-8 text-center shadow-lg dark:bg-gray-800">
 						<p className="text-gray-500 dark:text-gray-400">
 							No standings data available for this league.
 						</p>
@@ -115,33 +115,33 @@ export default async function LeaguePage({ params }: LeaguePageProps) {
 				)}
 
 				{/* Legend */}
-				<div className="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-					<h3 className="font-semibold text-gray-900 dark:text-white mb-4">Legend</h3>
+				<div className="mt-8 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
+					<h3 className="mb-4 font-semibold text-gray-900 dark:text-white">Legend</h3>
 					<div className="flex flex-wrap gap-6 text-sm">
 						<div className="flex items-center gap-2">
-							<span className="w-6 h-6 bg-green-500 rounded-full"></span>
+							<span className="h-6 w-6 rounded-full bg-green-500" />
 							<span className="text-gray-600 dark:text-gray-400">
 								Champions League
 							</span>
 						</div>
 						<div className="flex items-center gap-2">
-							<span className="w-6 h-6 bg-red-500 rounded-full"></span>
+							<span className="h-6 w-6 rounded-full bg-red-500" />
 							<span className="text-gray-600 dark:text-gray-400">Relegation</span>
 						</div>
 						<div className="flex items-center gap-2">
-							<span className="w-5 h-5 bg-green-500 text-white text-xs font-bold flex items-center justify-center rounded">
+							<span className="flex h-5 w-5 items-center justify-center rounded bg-green-500 text-xs font-bold text-white">
 								W
 							</span>
 							<span className="text-gray-600 dark:text-gray-400">Win</span>
 						</div>
 						<div className="flex items-center gap-2">
-							<span className="w-5 h-5 bg-gray-400 text-white text-xs font-bold flex items-center justify-center rounded">
+							<span className="flex h-5 w-5 items-center justify-center rounded bg-gray-400 text-xs font-bold text-white">
 								D
 							</span>
 							<span className="text-gray-600 dark:text-gray-400">Draw</span>
 						</div>
 						<div className="flex items-center gap-2">
-							<span className="w-5 h-5 bg-red-500 text-white text-xs font-bold flex items-center justify-center rounded">
+							<span className="flex h-5 w-5 items-center justify-center rounded bg-red-500 text-xs font-bold text-white">
 								L
 							</span>
 							<span className="text-gray-600 dark:text-gray-400">Loss</span>
