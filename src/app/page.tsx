@@ -26,7 +26,7 @@ export default function Home() {
 			{/* Hero Section */}
 			<header className="relative overflow-hidden">
 				<div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 opacity-90"></div>
-				<div className="absolute inset-0 bg-[url('/stadium-pattern.svg')] opacity-10"></div>
+				<div className="absolute inset-0 bg-[url('/stadium-pattern.png')] opacity-10"></div>
 				<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
 					<h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
 						⚽ Football Hub

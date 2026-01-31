@@ -27,28 +27,30 @@ This project includes a **Football Hub** application that connects to a real foo
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/cardacci/nextjs-practices.git
-   cd nextjs-practices
-   ```
+
+    ```bash
+    git clone https://github.com/cardacci/nextjs-practices.git
+    cd nextjs-practices
+    ```
 
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+
+    ```bash
+    npm install
+    ```
 
 3. Configure the API key:
-   - Get a free API key from [RapidAPI - API-Football](https://rapidapi.com/api-sports/api/api-football)
-   - Copy `.env.example` to `.env.local`
-   - Add your API key to `.env.local`:
-     ```
-     FOOTBALL_API_KEY=your_api_key_here
-     ```
+    - Get a free API key from [RapidAPI - API-Football](https://rapidapi.com/api-sports/api/api-football)
+    - Copy `.env.example` to `.env.local`
+    - Add your API key to `.env.local`:
+        ```
+        FOOTBALL_API_KEY=your_api_key_here
+        ```
 
 4. Run the development server:
-   ```bash
-   npm run dev
-   ```
+    ```bash
+    npm run dev
+    ```
 
 ## Usage
 
@@ -56,12 +58,12 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ### Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint |
+| Command         | Description              |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start development server |
+| `npm run build` | Build for production     |
+| `npm run start` | Start production server  |
+| `npm run lint`  | Run ESLint               |
 
 ## Technologies Used
 
@@ -75,30 +77,95 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ```
 nextjs-practices/
-├── src/
-│   ├── app/                    # Next.js App Router pages
-│   │   ├── leagues/[id]/       # Dynamic league pages
-│   │   ├── globals.css         # Global styles
-│   │   ├── layout.tsx          # Root layout
-│   │   └── page.tsx            # Home page
-│   ├── components/             # Reusable React components
-│   │   └── football/           # Football-specific components
-│   │       ├── FixtureCard.tsx
-│   │       ├── LeagueCard.tsx
-│   │       ├── StandingsTable.tsx
-│   │       └── index.ts
-│   └── lib/                    # Utilities and API services
-│       └── api/
-│           ├── football.ts     # Football API service layer
-│           └── index.ts
-├── public/                     # Static assets
-├── .env.example               # Environment variables template
-├── .env.local                 # Local environment variables (not in git)
-├── next.config.ts             # Next.js configuration
-├── tailwind.config.ts         # Tailwind CSS configuration
-├── tsconfig.json              # TypeScript configuration
-└── package.json               # Project dependencies
+├── 📁 .vscode/                          # VS Code workspace settings
+│   └── settings.json                    # Editor configuration (tabs, formatting)
+├── 📁 public/                           # Static assets
+│   ├── favicon.svg                      # App favicon
+│   ├── stadium-pattern.png              # Background pattern for header
+│   ├── file.svg                         # Generic file icon
+│   ├── globe.svg                        # Globe icon
+│   ├── next.svg                         # Next.js logo
+│   └── vercel.svg                       # Vercel logo
+├── 📁 src/                              # Source code
+│   ├── 📁 app/                          # Next.js App Router
+│   │   ├── 📁 leagues/                  # Dynamic routes
+│   │   │   └── 📁 [id]/                 # League detail pages (/leagues/39)
+│   │   │       └── page.tsx             # League standings page
+│   │   ├── globals.css                  # Global CSS styles
+│   │   ├── layout.tsx                   # Root layout component
+│   │   └── page.tsx                     # Home page (Football Hub)
+│   ├── 📁 components/                   # Reusable React components
+│   │   ├── 📁 football/                 # Football-specific components
+│   │   │   ├── FixtureCard.tsx          # Match fixture display
+│   │   │   ├── LeagueCard.tsx           # League selection card
+│   │   │   ├── StandingsTable.tsx       # League standings table
+│   │   │   └── index.ts                 # Component exports
+│   │   └── index.ts                     # Main component exports
+│   └── 📁 lib/                          # Utilities and services
+│       └── 📁 api/                      # API layer
+│           ├── football.ts              # Football API functions & types
+│           └── index.ts                 # API exports
+├── 📄 .editorconfig                     # Universal editor settings
+├── 📄 .env.example                      # Environment variables template
+├── 📄 .env.local                        # Local environment variables
+├── 📄 .gitignore                        # Git ignore rules
+├── 📄 .prettierrc                       # Prettier configuration
+├── 📄 eslint.config.mjs                 # ESLint configuration
+├── 📄 next.config.ts                    # Next.js configuration
+├── 📄 package.json                      # Project dependencies & scripts
+├── 📄 postcss.config.mjs                # PostCSS configuration
+├── 📄 README.md                         # Project documentation
+├── 📄 tailwind.config.ts                # Tailwind CSS configuration
+└── 📄 tsconfig.json                     # TypeScript configuration
 ```
+
+### 🏗️ **App Architecture Overview**
+
+#### **Frontend Structure (Next.js App Router)**
+
+- **`app/layout.tsx`** - Root layout with metadata, fonts, and global styles
+- **`app/page.tsx`** - Home page with league selection and features showcase
+- **`app/leagues/[id]/page.tsx`** - Dynamic league pages with standings
+
+#### **Component Architecture**
+
+- **`components/football/`** - Specialized football components
+    - `StandingsTable` - Displays league tables with team stats
+    - `FixtureCard` - Shows match information and scores
+    - `LeagueCard` - Interactive league selection cards
+
+#### **API Layer**
+
+- **`lib/api/football.ts`** - Complete API service layer
+    - TypeScript interfaces for all API responses
+    - Functions for leagues, teams, standings, and fixtures
+    - Error handling and caching configuration
+
+#### **Configuration Files**
+
+- **`.vscode/settings.json`** - VS Code workspace settings (tabs, formatting)
+- **`.editorconfig`** - Universal editor configuration
+- **`.prettierrc`** - Code formatting rules (tabs of 4 spaces)
+- **`next.config.ts`** - Next.js configuration (images, compiler)
+- **`tailwind.config.ts`** - Tailwind CSS customization
+
+### 📂 **Key Directories Explained**
+
+| Directory         | Purpose                                     |
+| ----------------- | ------------------------------------------- |
+| `src/app/`        | Next.js pages and layouts (App Router)      |
+| `src/components/` | Reusable React components                   |
+| `src/lib/`        | Utilities, API services, and business logic |
+| `public/`         | Static assets served directly               |
+| `.vscode/`        | VS Code workspace configuration             |
+
+### 🔄 **Data Flow**
+
+1. **User visits** `/` → `app/page.tsx` renders league selection
+2. **User clicks league** → Navigates to `/leagues/[id]`
+3. **Server fetches data** → `getStandings()` from API
+4. **SSR renders page** → `StandingsTable` displays data
+5. **Client hydration** → Interactive features activate
 
 ## API Layer Architecture
 
@@ -113,17 +180,18 @@ const standings = await getStandings(POPULAR_LEAGUES.PREMIER_LEAGUE, CURRENT_SEA
 
 ### Available API Functions
 
-| Function | Description |
-|----------|-------------|
-| `getLeagues()` | Get available leagues |
-| `getTeams()` | Get teams by league |
-| `getStandings()` | Get league standings |
-| `getFixtures()` | Get match fixtures |
-| `getLiveFixtures()` | Get live matches |
+| Function            | Description           |
+| ------------------- | --------------------- |
+| `getLeagues()`      | Get available leagues |
+| `getTeams()`        | Get teams by league   |
+| `getStandings()`    | Get league standings  |
+| `getFixtures()`     | Get match fixtures    |
+| `getLiveFixtures()` | Get live matches      |
 
 ## API Configuration
 
 The free tier of API-Football includes:
+
 - 100 requests/day
 - Access to leagues, teams, players, fixtures, and standings
 
