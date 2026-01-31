@@ -1,6 +1,7 @@
 {
-	"name": "nextjs-practices",
-	"version": "0.1.0",
+	"name": "football-hub",
+	"version": "1.0.0",
+	"description": "A modern football dashboard featuring real-time standings, fixtures, and league information powered by API-Football",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",

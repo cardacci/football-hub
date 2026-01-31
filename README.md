@@ -1,10 +1,8 @@
-# Next.js Practices ⚽
+# Football Hub ⚽
 
 ## Description
 
-Personal repository for practicing and exploring Next.js, including development strategies, related technologies (such as React, SSR, SSG, API Routes), and practical examples of modern web applications.
-
-This project includes a **Football Hub** application that connects to a real football API to demonstrate API integration, server-side rendering, and modern React patterns.
+**Football Hub** is a modern web application that provides real-time football data including league standings, match fixtures, and comprehensive team information. Built with Next.js and powered by API-Football, it delivers a seamless experience for football enthusiasts who want to stay updated with their favorite leagues.
 
 ## Features
 
@@ -29,8 +27,8 @@ This project includes a **Football Hub** application that connects to a real foo
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/cardacci/nextjs-practices.git
-    cd nextjs-practices
+    git clone https://github.com/cardacci/football-hub.git
+    cd football-hub
     ```
 
 2. Install dependencies:
@@ -76,7 +74,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 ## Project Structure
 
 ```
-nextjs-practices/
+football-hub/
 ├── 📁 .vscode/                          # VS Code workspace settings
 │   └── settings.json                    # Editor configuration (tabs, formatting)
 ├── 📁 public/                           # Static assets
@@ -214,7 +212,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Contributing
 
-This is a personal practice repository. Feel free to fork and experiment!
+Contributions are welcome! Feel free to open issues or submit pull requests to help improve Football Hub.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
