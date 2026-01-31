@@ -4,6 +4,12 @@
 	"type": "clubs",
 	"editions": [
 		{
+			"year": 2025,
+			"winner": "Flamengo",
+			"runnerUp": "Palmeiras",
+			"finalScore": "1-0"
+		},
+		{
 			"year": 2024,
 			"winner": "Botafogo",
 			"runnerUp": "Atlético Mineiro",
@@ -43,25 +49,355 @@
 			"year": 2018,
 			"winner": "River Plate",
 			"runnerUp": "Boca Juniors",
-			"finalScore": "3-1 (agg)"
+			"finalScore": "2-2, 3-1"
 		},
 		{
 			"year": 2017,
 			"winner": "Grêmio",
 			"runnerUp": "Lanús",
-			"finalScore": "3-1 (agg)"
+			"finalScore": "1-0, 2-1"
 		},
 		{
 			"year": 2016,
 			"winner": "Atlético Nacional",
 			"runnerUp": "Independiente del Valle",
-			"finalScore": "2-1 (agg)"
+			"finalScore": "1-1, 1-0"
 		},
 		{
 			"year": 2015,
 			"winner": "River Plate",
 			"runnerUp": "Tigres UANL",
-			"finalScore": "3-0 (agg)"
+			"finalScore": "0-0, 3-0"
+		},
+		{
+			"year": 2014,
+			"winner": "San Lorenzo",
+			"runnerUp": "Nacional",
+			"finalScore": "1-1, 1-0"
+		},
+		{
+			"year": 2013,
+			"winner": "Atlético Mineiro",
+			"runnerUp": "Olimpia",
+			"finalScore": "2-0, 0-2 (4-3 pen)"
+		},
+		{
+			"year": 2012,
+			"winner": "Corinthians",
+			"runnerUp": "Boca Juniors",
+			"finalScore": "1-1, 2-0"
+		},
+		{
+			"year": 2011,
+			"winner": "Santos",
+			"runnerUp": "Peñarol",
+			"finalScore": "0-0, 2-1"
+		},
+		{
+			"year": 2010,
+			"winner": "Internacional",
+			"runnerUp": "Guadalajara",
+			"finalScore": "2-1, 3-2"
+		},
+		{
+			"year": 2009,
+			"winner": "Estudiantes",
+			"runnerUp": "Cruzeiro",
+			"finalScore": "0-0, 2-1"
+		},
+		{
+			"year": 2008,
+			"winner": "LDU Quito",
+			"runnerUp": "Fluminense",
+			"finalScore": "4-2, 1-3 (3-1 pen)"
+		},
+		{
+			"year": 2007,
+			"winner": "Boca Juniors",
+			"runnerUp": "Grêmio",
+			"finalScore": "3-0, 0-2"
+		},
+		{
+			"year": 2006,
+			"winner": "Internacional",
+			"runnerUp": "São Paulo",
+			"finalScore": "2-1, 2-2"
+		},
+		{
+			"year": 2005,
+			"winner": "São Paulo",
+			"runnerUp": "Atlético Paranaense",
+			"finalScore": "1-1, 4-0"
+		},
+		{
+			"year": 2004,
+			"winner": "Once Caldas",
+			"runnerUp": "Boca Juniors",
+			"finalScore": "0-0, 1-1 (2-0 pen)"
+		},
+		{
+			"year": 2003,
+			"winner": "Boca Juniors",
+			"runnerUp": "Santos",
+			"finalScore": "2-0, 3-1"
+		},
+		{
+			"year": 2002,
+			"winner": "Olimpia",
+			"runnerUp": "São Caetano",
+			"finalScore": "0-1, 2-1 (4-2 pen)"
+		},
+		{
+			"year": 2001,
+			"winner": "Boca Juniors",
+			"runnerUp": "Cruz Azul",
+			"finalScore": "1-0, 0-1 (3-1 pen)"
+		},
+		{
+			"year": 2000,
+			"winner": "Boca Juniors",
+			"runnerUp": "Palmeiras",
+			"finalScore": "2-2, 0-0 (4-2 pen)"
+		},
+		{
+			"year": 1999,
+			"winner": "Palmeiras",
+			"runnerUp": "Deportivo Cali",
+			"finalScore": "0-1, 2-1 (4-3 pen)"
+		},
+		{
+			"year": 1998,
+			"winner": "Vasco da Gama",
+			"runnerUp": "Barcelona SC",
+			"finalScore": "2-0, 2-1"
+		},
+		{
+			"year": 1997,
+			"winner": "Cruzeiro",
+			"runnerUp": "Sporting Cristal",
+			"finalScore": "0-0, 1-0"
+		},
+		{
+			"year": 1996,
+			"winner": "River Plate",
+			"runnerUp": "América de Cali",
+			"finalScore": "0-1, 2-0"
+		},
+		{
+			"year": 1995,
+			"winner": "Grêmio",
+			"runnerUp": "Atlético Nacional",
+			"finalScore": "3-1, 1-1"
+		},
+		{
+			"year": 1994,
+			"winner": "Vélez Sársfield",
+			"runnerUp": "São Paulo",
+			"finalScore": "1-0, 0-1 (5-3 pen)"
+		},
+		{
+			"year": 1993,
+			"winner": "São Paulo",
+			"runnerUp": "Universidad Católica",
+			"finalScore": "5-1, 0-2"
+		},
+		{
+			"year": 1992,
+			"winner": "São Paulo",
+			"runnerUp": "Newell's Old Boys",
+			"finalScore": "1-0, 0-1 (3-2 pen)"
+		},
+		{
+			"year": 1991,
+			"winner": "Colo-Colo",
+			"runnerUp": "Olimpia",
+			"finalScore": "0-0, 3-0"
+		},
+		{
+			"year": 1990,
+			"winner": "Olimpia",
+			"runnerUp": "Barcelona SC",
+			"finalScore": "2-0, 1-1"
+		},
+		{
+			"year": 1989,
+			"winner": "Atlético Nacional",
+			"runnerUp": "Olimpia",
+			"finalScore": "2-0, 0-2 (5-4 pen)"
+		},
+		{
+			"year": 1988,
+			"winner": "Nacional",
+			"runnerUp": "Newell's Old Boys",
+			"finalScore": "1-0, 0-3, 0-0 (7-6 pen)"
+		},
+		{
+			"year": 1987,
+			"winner": "Peñarol",
+			"runnerUp": "América de Cali",
+			"finalScore": "0-2, 2-1, 1-0"
+		},
+		{
+			"year": 1986,
+			"winner": "River Plate",
+			"runnerUp": "América de Cali",
+			"finalScore": "2-1, 1-0"
+		},
+		{
+			"year": 1985,
+			"winner": "Argentinos Juniors",
+			"runnerUp": "América de Cali",
+			"finalScore": "1-0, 0-1 (5-4 pen)"
+		},
+		{
+			"year": 1984,
+			"winner": "Independiente",
+			"runnerUp": "Grêmio",
+			"finalScore": "1-0, 0-0"
+		},
+		{
+			"year": 1983,
+			"winner": "Grêmio",
+			"runnerUp": "Peñarol",
+			"finalScore": "1-1, 2-1"
+		},
+		{
+			"year": 1982,
+			"winner": "Peñarol",
+			"runnerUp": "Cobreloa",
+			"finalScore": "0-0, 1-0"
+		},
+		{
+			"year": 1981,
+			"winner": "Flamengo",
+			"runnerUp": "Cobreloa",
+			"finalScore": "2-1, 0-1, 2-0"
+		},
+		{
+			"year": 1980,
+			"winner": "Nacional",
+			"runnerUp": "Internacional",
+			"finalScore": "0-0, 1-0"
+		},
+		{
+			"year": 1979,
+			"winner": "Olimpia",
+			"runnerUp": "Boca Juniors",
+			"finalScore": "2-0, 0-0"
+		},
+		{
+			"year": 1978,
+			"winner": "Boca Juniors",
+			"runnerUp": "Deportivo Cali",
+			"finalScore": "0-0, 4-0"
+		},
+		{
+			"year": 1977,
+			"winner": "Boca Juniors",
+			"runnerUp": "Cruzeiro",
+			"finalScore": "1-0, 0-1, 0-0 (5-4 pen)"
+		},
+		{
+			"year": 1976,
+			"winner": "Cruzeiro",
+			"runnerUp": "River Plate",
+			"finalScore": "4-1, 1-2, 3-2"
+		},
+		{
+			"year": 1975,
+			"winner": "Independiente",
+			"runnerUp": "Unión Española",
+			"finalScore": "1-0, 3-1"
+		},
+		{
+			"year": 1974,
+			"winner": "Independiente",
+			"runnerUp": "São Paulo",
+			"finalScore": "1-2, 2-0, 1-0"
+		},
+		{
+			"year": 1973,
+			"winner": "Independiente",
+			"runnerUp": "Colo-Colo",
+			"finalScore": "1-1, 0-0, 2-1"
+		},
+		{
+			"year": 1972,
+			"winner": "Independiente",
+			"runnerUp": "Universitario",
+			"finalScore": "0-0, 2-1"
+		},
+		{
+			"year": 1971,
+			"winner": "Nacional",
+			"runnerUp": "Estudiantes",
+			"finalScore": "1-0, 0-1, 2-0"
+		},
+		{
+			"year": 1970,
+			"winner": "Estudiantes",
+			"runnerUp": "Peñarol",
+			"finalScore": "1-0, 0-0"
+		},
+		{
+			"year": 1969,
+			"winner": "Estudiantes",
+			"runnerUp": "Nacional",
+			"finalScore": "1-0, 2-0"
+		},
+		{
+			"year": 1968,
+			"winner": "Estudiantes",
+			"runnerUp": "Palmeiras",
+			"finalScore": "2-1, 1-3, 2-0"
+		},
+		{
+			"year": 1967,
+			"winner": "Racing Club",
+			"runnerUp": "Nacional",
+			"finalScore": "0-0, 0-0, 2-1"
+		},
+		{
+			"year": 1966,
+			"winner": "Peñarol",
+			"runnerUp": "River Plate",
+			"finalScore": "2-0, 2-3, 4-2"
+		},
+		{
+			"year": 1965,
+			"winner": "Independiente",
+			"runnerUp": "Peñarol",
+			"finalScore": "1-0, 1-3, 4-1"
+		},
+		{
+			"year": 1964,
+			"winner": "Independiente",
+			"runnerUp": "Nacional",
+			"finalScore": "0-0, 1-0"
+		},
+		{
+			"year": 1963,
+			"winner": "Santos",
+			"runnerUp": "Boca Juniors",
+			"finalScore": "3-2, 2-1"
+		},
+		{
+			"year": 1962,
+			"winner": "Santos",
+			"runnerUp": "Peñarol",
+			"finalScore": "2-1, 2-3, 3-0"
+		},
+		{
+			"year": 1961,
+			"winner": "Peñarol",
+			"runnerUp": "Palmeiras",
+			"finalScore": "1-0, 1-1"
+		},
+		{
+			"year": 1960,
+			"winner": "Peñarol",
+			"runnerUp": "Olimpia",
+			"finalScore": "1-0, 1-1"
 		}
 	]
 }

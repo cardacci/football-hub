@@ -4,7 +4,7 @@
 	"type": "national",
 	"editions": [
 		{
-			"year": 2024,
+			"year": 2023,
 			"winner": "Qatar",
 			"runnerUp": "Jordan",
 			"host": "Qatar",
@@ -35,7 +35,7 @@
 			"year": 2007,
 			"winner": "Iraq",
 			"runnerUp": "Saudi Arabia",
-			"host": "Indonesia/Malaysia/Thailand/Vietnam",
+			"host": "Indonesia",
 			"finalScore": "1-0"
 		},
 		{
@@ -44,6 +44,90 @@
 			"runnerUp": "China",
 			"host": "China",
 			"finalScore": "3-1"
+		},
+		{
+			"year": 2000,
+			"winner": "Japan",
+			"runnerUp": "Saudi Arabia",
+			"host": "Lebanon",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 1996,
+			"winner": "Saudi Arabia",
+			"runnerUp": "UAE",
+			"host": "UAE",
+			"finalScore": "0-0 (4-2 pen)"
+		},
+		{
+			"year": 1992,
+			"winner": "Japan",
+			"runnerUp": "Saudi Arabia",
+			"host": "Japan",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 1988,
+			"winner": "Saudi Arabia",
+			"runnerUp": "South Korea",
+			"host": "Qatar",
+			"finalScore": "0-0 (4-3 pen)"
+		},
+		{
+			"year": 1984,
+			"winner": "Saudi Arabia",
+			"runnerUp": "China",
+			"host": "Singapore",
+			"finalScore": "2-0"
+		},
+		{
+			"year": 1980,
+			"winner": "Kuwait",
+			"runnerUp": "South Korea",
+			"host": "Kuwait",
+			"finalScore": "3-0"
+		},
+		{
+			"year": 1976,
+			"winner": "Iran",
+			"runnerUp": "Kuwait",
+			"host": "Iran",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 1972,
+			"winner": "Iran",
+			"runnerUp": "South Korea",
+			"host": "Thailand",
+			"finalScore": "2-1"
+		},
+		{
+			"year": 1968,
+			"winner": "Iran",
+			"runnerUp": "Burma",
+			"host": "Iran",
+			"finalScore": "2-1"
+		},
+		{
+			"year": 1964,
+			"winner": "Israel",
+			"runnerUp": "India",
+			"host": "Israel",
+			"finalScore": "2-0"
+		},
+		{
+			"year": 1960,
+			"winner": "South Korea",
+			"runnerUp": "Israel",
+			"host": "South Korea",
+			"finalScore": "Round-robin"
+		},
+		{
+			"year": 1956,
+			"winner": "South Korea",
+			"runnerUp": "Israel",
+			"host": "Hong Kong",
+			"finalScore": "Round-robin"
 		}
 	]
 }

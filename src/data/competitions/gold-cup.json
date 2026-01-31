@@ -4,6 +4,13 @@
 	"type": "national",
 	"editions": [
 		{
+			"year": 2025,
+			"winner": "USA",
+			"runnerUp": "Costa Rica",
+			"host": "USA",
+			"finalScore": "2-0"
+		},
+		{
 			"year": 2023,
 			"winner": "Mexico",
 			"runnerUp": "Panama",
@@ -21,7 +28,7 @@
 			"year": 2019,
 			"winner": "Mexico",
 			"runnerUp": "USA",
-			"host": "USA/Costa Rica/Jamaica",
+			"host": "USA",
 			"finalScore": "1-0"
 		},
 		{
@@ -44,6 +51,83 @@
 			"runnerUp": "Panama",
 			"host": "USA",
 			"finalScore": "1-0"
+		},
+		{
+			"year": 2011,
+			"winner": "Mexico",
+			"runnerUp": "USA",
+			"host": "USA",
+			"finalScore": "4-2"
+		},
+		{
+			"year": 2009,
+			"winner": "Mexico",
+			"runnerUp": "USA",
+			"host": "USA",
+			"finalScore": "5-0"
+		},
+		{
+			"year": 2007,
+			"winner": "USA",
+			"runnerUp": "Mexico",
+			"host": "USA",
+			"finalScore": "2-1"
+		},
+		{
+			"year": 2005,
+			"winner": "USA",
+			"runnerUp": "Panama",
+			"host": "USA",
+			"finalScore": "0-0 (3-1 pen)"
+		},
+		{
+			"year": 2003,
+			"winner": "Mexico",
+			"runnerUp": "Brazil",
+			"host": "USA/Mexico",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 2002,
+			"winner": "USA",
+			"runnerUp": "Costa Rica",
+			"host": "USA",
+			"finalScore": "2-0"
+		},
+		{
+			"year": 2000,
+			"winner": "Canada",
+			"runnerUp": "Colombia",
+			"host": "USA",
+			"finalScore": "2-0"
+		},
+		{
+			"year": 1998,
+			"winner": "Mexico",
+			"runnerUp": "USA",
+			"host": "USA",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 1996,
+			"winner": "Mexico",
+			"runnerUp": "Brazil",
+			"host": "USA",
+			"finalScore": "2-0"
+		},
+		{
+			"year": 1993,
+			"winner": "Mexico",
+			"runnerUp": "USA",
+			"host": "USA/Mexico",
+			"finalScore": "4-0"
+		},
+		{
+			"year": 1991,
+			"winner": "USA",
+			"runnerUp": "Honduras",
+			"host": "USA",
+			"finalScore": "0-0 (4-3 pen)"
 		}
 	]
 }

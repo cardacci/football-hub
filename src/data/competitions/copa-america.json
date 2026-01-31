@@ -4,74 +4,292 @@
 	"type": "national",
 	"editions": [
 		{
-			"year": 2024,
+			"year": "2024",
 			"winner": "Argentina",
 			"runnerUp": "Colombia",
-			"host": "USA",
-			"finalScore": "1-0 (a.e.t.)"
+			"finalScore": "1-0 (aet)"
 		},
 		{
-			"year": 2021,
+			"year": "2021",
 			"winner": "Argentina",
 			"runnerUp": "Brazil",
-			"host": "Brazil",
 			"finalScore": "1-0"
 		},
 		{
-			"year": 2019,
+			"year": "2019",
 			"winner": "Brazil",
 			"runnerUp": "Peru",
-			"host": "Brazil",
 			"finalScore": "3-1"
 		},
 		{
-			"year": 2016,
+			"year": "2016",
 			"winner": "Chile",
 			"runnerUp": "Argentina",
-			"host": "USA",
 			"finalScore": "0-0 (4-2 pen)"
 		},
 		{
-			"year": 2015,
+			"year": "2015",
 			"winner": "Chile",
 			"runnerUp": "Argentina",
-			"host": "Chile",
 			"finalScore": "0-0 (4-1 pen)"
 		},
 		{
-			"year": 2011,
+			"year": "2011",
 			"winner": "Uruguay",
 			"runnerUp": "Paraguay",
-			"host": "Argentina",
 			"finalScore": "3-0"
 		},
 		{
-			"year": 2007,
+			"year": "2007",
 			"winner": "Brazil",
 			"runnerUp": "Argentina",
-			"host": "Venezuela",
 			"finalScore": "3-0"
 		},
 		{
-			"year": 2004,
+			"year": "2004",
 			"winner": "Brazil",
 			"runnerUp": "Argentina",
-			"host": "Peru",
 			"finalScore": "2-2 (4-2 pen)"
 		},
 		{
-			"year": 2001,
+			"year": "2001",
 			"winner": "Colombia",
 			"runnerUp": "Mexico",
-			"host": "Colombia",
 			"finalScore": "1-0"
 		},
 		{
-			"year": 1999,
+			"year": "1999",
 			"winner": "Brazil",
 			"runnerUp": "Uruguay",
-			"host": "Paraguay",
 			"finalScore": "3-0"
+		},
+		{
+			"year": "1997",
+			"winner": "Brazil",
+			"runnerUp": "Bolivia",
+			"finalScore": "3-1"
+		},
+		{
+			"year": "1995",
+			"winner": "Uruguay",
+			"runnerUp": "Brazil",
+			"finalScore": "1-1 (5-3 pen)"
+		},
+		{
+			"year": "1993",
+			"winner": "Argentina",
+			"runnerUp": "Mexico",
+			"finalScore": "2-1"
+		},
+		{
+			"year": "1991",
+			"winner": "Argentina",
+			"runnerUp": "Brazil",
+			"finalScore": "3-2 (agg)"
+		},
+		{
+			"year": "1989",
+			"winner": "Brazil",
+			"runnerUp": "Uruguay",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1987",
+			"winner": "Uruguay",
+			"runnerUp": "Chile",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1983",
+			"winner": "Uruguay",
+			"runnerUp": "Brazil",
+			"finalScore": "3-1 (agg)"
+		},
+		{
+			"year": "1979",
+			"winner": "Paraguay",
+			"runnerUp": "Chile",
+			"finalScore": "3-1 (agg)"
+		},
+		{
+			"year": "1975",
+			"winner": "Peru",
+			"runnerUp": "Colombia",
+			"finalScore": "1-0 (agg)"
+		},
+		{
+			"year": "1967",
+			"winner": "Uruguay",
+			"runnerUp": "Argentina",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1963",
+			"winner": "Bolivia",
+			"runnerUp": "Paraguay",
+			"finalScore": "5-4 (agg)"
+		},
+		{
+			"year": "1959 (Ecuador)",
+			"winner": "Argentina",
+			"runnerUp": "Brazil",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1959 (Argentina)",
+			"winner": "Uruguay",
+			"runnerUp": "Argentina",
+			"finalScore": "Round-robin"
+		},
+		{
+			"year": "1957",
+			"winner": "Argentina",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1956",
+			"winner": "Uruguay",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1955",
+			"winner": "Argentina",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1953",
+			"winner": "Paraguay",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1949",
+			"winner": "Brazil",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1947",
+			"winner": "Argentina",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1946",
+			"winner": "Argentina",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1945",
+			"winner": "Argentina",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1942",
+			"winner": "Uruguay",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1941",
+			"winner": "Argentina",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1939",
+			"winner": "Peru",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1937",
+			"winner": "Argentina",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1935",
+			"winner": "Argentina",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1929",
+			"winner": "Argentina",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1927",
+			"winner": "Argentina",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1926",
+			"winner": "Uruguay",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1925",
+			"winner": "Argentina",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1924",
+			"winner": "Uruguay",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1923",
+			"winner": "Uruguay",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1922",
+			"winner": "Brazil",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1921",
+			"winner": "Argentina",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1920",
+			"winner": "Uruguay",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1919",
+			"winner": "Brazil",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1917",
+			"winner": "Uruguay",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
+		},
+		{
+			"year": "1916",
+			"winner": "Uruguay",
+			"runnerUp": "Round-robin",
+			"finalScore": "-"
 		}
 	]
 }

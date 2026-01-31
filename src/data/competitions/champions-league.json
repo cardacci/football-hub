@@ -4,6 +4,12 @@
 	"type": "clubs",
 	"editions": [
 		{
+			"year": "2024-25",
+			"winner": "Paris Saint-Germain",
+			"runnerUp": "Inter Milan",
+			"finalScore": "5-0"
+		},
+		{
 			"year": "2023-24",
 			"winner": "Real Madrid",
 			"runnerUp": "Borussia Dortmund",
@@ -67,7 +73,7 @@
 			"year": "2013-14",
 			"winner": "Real Madrid",
 			"runnerUp": "Atlético Madrid",
-			"finalScore": "4-1 (a.e.t.)"
+			"finalScore": "4-1 (aet)"
 		},
 		{
 			"year": "2012-13",
@@ -122,6 +128,300 @@
 			"winner": "Liverpool",
 			"runnerUp": "AC Milan",
 			"finalScore": "3-3 (3-2 pen)"
+		},
+		{
+			"year": "2003-04",
+			"winner": "Porto",
+			"runnerUp": "Monaco",
+			"finalScore": "3-0"
+		},
+		{
+			"year": "2002-03",
+			"winner": "AC Milan",
+			"runnerUp": "Juventus",
+			"finalScore": "0-0 (3-2 pen)"
+		},
+		{
+			"year": "2001-02",
+			"winner": "Real Madrid",
+			"runnerUp": "Bayer Leverkusen",
+			"finalScore": "2-1"
+		},
+		{
+			"year": "2000-01",
+			"winner": "Bayern Munich",
+			"runnerUp": "Valencia",
+			"finalScore": "1-1 (5-4 pen)"
+		},
+		{
+			"year": "1999-00",
+			"winner": "Real Madrid",
+			"runnerUp": "Valencia",
+			"finalScore": "3-0"
+		},
+		{
+			"year": "1998-99",
+			"winner": "Manchester United",
+			"runnerUp": "Bayern Munich",
+			"finalScore": "2-1"
+		},
+		{
+			"year": "1997-98",
+			"winner": "Real Madrid",
+			"runnerUp": "Juventus",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1996-97",
+			"winner": "Borussia Dortmund",
+			"runnerUp": "Juventus",
+			"finalScore": "3-1"
+		},
+		{
+			"year": "1995-96",
+			"winner": "Juventus",
+			"runnerUp": "Ajax",
+			"finalScore": "1-1 (4-2 pen)"
+		},
+		{
+			"year": "1994-95",
+			"winner": "Ajax",
+			"runnerUp": "AC Milan",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1993-94",
+			"winner": "AC Milan",
+			"runnerUp": "Barcelona",
+			"finalScore": "4-0"
+		},
+		{
+			"year": "1992-93",
+			"winner": "Marseille",
+			"runnerUp": "AC Milan",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1991-92",
+			"winner": "Barcelona",
+			"runnerUp": "Sampdoria",
+			"finalScore": "1-0 (aet)"
+		},
+		{
+			"year": "1990-91",
+			"winner": "Red Star Belgrade",
+			"runnerUp": "Marseille",
+			"finalScore": "0-0 (5-3 pen)"
+		},
+		{
+			"year": "1989-90",
+			"winner": "AC Milan",
+			"runnerUp": "Benfica",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1988-89",
+			"winner": "AC Milan",
+			"runnerUp": "Steaua București",
+			"finalScore": "4-0"
+		},
+		{
+			"year": "1987-88",
+			"winner": "PSV Eindhoven",
+			"runnerUp": "Benfica",
+			"finalScore": "0-0 (6-5 pen)"
+		},
+		{
+			"year": "1986-87",
+			"winner": "Porto",
+			"runnerUp": "Bayern Munich",
+			"finalScore": "2-1"
+		},
+		{
+			"year": "1985-86",
+			"winner": "Steaua București",
+			"runnerUp": "Barcelona",
+			"finalScore": "0-0 (2-0 pen)"
+		},
+		{
+			"year": "1984-85",
+			"winner": "Juventus",
+			"runnerUp": "Liverpool",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1983-84",
+			"winner": "Liverpool",
+			"runnerUp": "Roma",
+			"finalScore": "1-1 (4-2 pen)"
+		},
+		{
+			"year": "1982-83",
+			"winner": "Hamburg",
+			"runnerUp": "Juventus",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1981-82",
+			"winner": "Aston Villa",
+			"runnerUp": "Bayern Munich",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1980-81",
+			"winner": "Liverpool",
+			"runnerUp": "Real Madrid",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1979-80",
+			"winner": "Nottingham Forest",
+			"runnerUp": "Hamburg",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1978-79",
+			"winner": "Nottingham Forest",
+			"runnerUp": "Malmö FF",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1977-78",
+			"winner": "Liverpool",
+			"runnerUp": "Club Brugge",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1976-77",
+			"winner": "Liverpool",
+			"runnerUp": "Borussia Mönchengladbach",
+			"finalScore": "3-1"
+		},
+		{
+			"year": "1975-76",
+			"winner": "Bayern Munich",
+			"runnerUp": "Saint-Étienne",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1974-75",
+			"winner": "Bayern Munich",
+			"runnerUp": "Leeds United",
+			"finalScore": "2-0"
+		},
+		{
+			"year": "1973-74",
+			"winner": "Bayern Munich",
+			"runnerUp": "Atlético Madrid",
+			"finalScore": "1-1, 4-0 (replay)"
+		},
+		{
+			"year": "1972-73",
+			"winner": "Ajax",
+			"runnerUp": "Juventus",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1971-72",
+			"winner": "Ajax",
+			"runnerUp": "Inter Milan",
+			"finalScore": "2-0"
+		},
+		{
+			"year": "1970-71",
+			"winner": "Ajax",
+			"runnerUp": "Panathinaikos",
+			"finalScore": "2-0"
+		},
+		{
+			"year": "1969-70",
+			"winner": "Feyenoord",
+			"runnerUp": "Celtic",
+			"finalScore": "2-1 (aet)"
+		},
+		{
+			"year": "1968-69",
+			"winner": "AC Milan",
+			"runnerUp": "Ajax",
+			"finalScore": "4-1"
+		},
+		{
+			"year": "1967-68",
+			"winner": "Manchester United",
+			"runnerUp": "Benfica",
+			"finalScore": "4-1 (aet)"
+		},
+		{
+			"year": "1966-67",
+			"winner": "Celtic",
+			"runnerUp": "Inter Milan",
+			"finalScore": "2-1"
+		},
+		{
+			"year": "1965-66",
+			"winner": "Real Madrid",
+			"runnerUp": "Partizan",
+			"finalScore": "2-1"
+		},
+		{
+			"year": "1964-65",
+			"winner": "Inter Milan",
+			"runnerUp": "Benfica",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "1963-64",
+			"winner": "Inter Milan",
+			"runnerUp": "Real Madrid",
+			"finalScore": "3-1"
+		},
+		{
+			"year": "1962-63",
+			"winner": "AC Milan",
+			"runnerUp": "Benfica",
+			"finalScore": "2-1"
+		},
+		{
+			"year": "1961-62",
+			"winner": "Benfica",
+			"runnerUp": "Real Madrid",
+			"finalScore": "5-3"
+		},
+		{
+			"year": "1960-61",
+			"winner": "Benfica",
+			"runnerUp": "Barcelona",
+			"finalScore": "3-2"
+		},
+		{
+			"year": "1959-60",
+			"winner": "Real Madrid",
+			"runnerUp": "Eintracht Frankfurt",
+			"finalScore": "7-3"
+		},
+		{
+			"year": "1958-59",
+			"winner": "Real Madrid",
+			"runnerUp": "Stade de Reims",
+			"finalScore": "2-0"
+		},
+		{
+			"year": "1957-58",
+			"winner": "Real Madrid",
+			"runnerUp": "AC Milan",
+			"finalScore": "3-2 (aet)"
+		},
+		{
+			"year": "1956-57",
+			"winner": "Real Madrid",
+			"runnerUp": "Fiorentina",
+			"finalScore": "2-0"
+		},
+		{
+			"year": "1955-56",
+			"winner": "Real Madrid",
+			"runnerUp": "Stade de Reims",
+			"finalScore": "4-3"
 		}
 	]
 }
