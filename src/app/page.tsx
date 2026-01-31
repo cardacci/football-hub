@@ -1,24 +1,13 @@
 import Link from 'next/link';
-import { POPULAR_LEAGUES } from '@/lib/api';
+import { LEAGUES_BY_CONTINENT, type Continent } from '@/lib/api';
 
 export default function Home() {
-	const featuredLeagues = [
-		{
-			id: POPULAR_LEAGUES.PREMIER_LEAGUE,
-			name: 'Premier League',
-			country: 'England',
-			emoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
-		},
-		{ id: POPULAR_LEAGUES.LA_LIGA, name: 'La Liga', country: 'Spain', emoji: '🇪🇸' },
-		{ id: POPULAR_LEAGUES.SERIE_A, name: 'Serie A', country: 'Italy', emoji: '🇮🇹' },
-		{ id: POPULAR_LEAGUES.BUNDESLIGA, name: 'Bundesliga', country: 'Germany', emoji: '🇩🇪' },
-		{ id: POPULAR_LEAGUES.LIGUE_1, name: 'Ligue 1', country: 'France', emoji: '🇫🇷' },
-		{
-			id: POPULAR_LEAGUES.CHAMPIONS_LEAGUE,
-			name: 'Champions League',
-			country: 'Europe',
-			emoji: '🏆',
-		},
+	const continentOrder: Continent[] = [
+		'europe',
+		'south-america',
+		'north-america',
+		'asia',
+		'international',
 	];
 
 	return (
@@ -74,31 +63,44 @@ export default function Home() {
 			<main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
 				<section className="mb-16">
 					<h2 className="mb-8 text-center text-3xl font-bold text-gray-900 dark:text-white">
-						Top Leagues
+						Leagues by Continent
 					</h2>
 
-					<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-						{featuredLeagues.map((league) => (
-							<Link
-								key={league.id}
-								href={`/leagues/${league.id}`}
-								className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-green-500 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:border-green-500"
-							>
-								<div className="flex items-center gap-4">
-									<span className="text-4xl">{league.emoji}</span>
+					<div className="space-y-12">
+						{continentOrder.map((continentKey) => {
+							const continent = LEAGUES_BY_CONTINENT[continentKey];
+							return (
+								<div key={continentKey}>
+									<h3 className="mb-4 flex items-center gap-2 text-xl font-semibold text-gray-800 dark:text-gray-200">
+										<span className="text-2xl">{continent.emoji}</span>
+										{continent.name}
+									</h3>
+									<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+										{continent.leagues.map((league) => (
+											<Link
+												key={league.id}
+												href={`/leagues/${league.id}`}
+												className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-green-500 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:border-green-500"
+											>
+												<div className="flex items-center gap-4">
+													<span className="text-4xl">{league.emoji}</span>
 
-									<div>
-										<h3 className="text-xl font-bold text-gray-900 transition-colors group-hover:text-green-600 dark:text-white dark:group-hover:text-green-400">
-											{league.name}
-										</h3>
+													<div>
+														<h4 className="text-xl font-bold text-gray-900 transition-colors group-hover:text-green-600 dark:text-white dark:group-hover:text-green-400">
+															{league.name}
+														</h4>
 
-										<p className="text-gray-500 dark:text-gray-400">
-											{league.country}
-										</p>
+														<p className="text-gray-500 dark:text-gray-400">
+															{league.country}
+														</p>
+													</div>
+												</div>
+											</Link>
+										))}
 									</div>
 								</div>
-							</Link>
-						))}
+							);
+						})}
 					</div>
 				</section>
 

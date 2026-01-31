@@ -317,6 +317,7 @@ export async function getLiveFixtures(): Promise<Fixture[]> {
 // =============================================================================
 
 export const POPULAR_LEAGUES = {
+	// Europe
 	PREMIER_LEAGUE: 39,
 	LA_LIGA: 140,
 	SERIE_A: 135,
@@ -324,10 +325,119 @@ export const POPULAR_LEAGUES = {
 	LIGUE_1: 61,
 	CHAMPIONS_LEAGUE: 2,
 	EUROPA_LEAGUE: 3,
-	WORLD_CUP: 1,
-	COPA_AMERICA: 9,
+	// South America
+	ARGENTINA_PRIMERA: 128,
+	BRASIL_SERIE_A: 71,
+	COPA_LIBERTADORES: 13,
+	// North/Central America
 	MLS: 253,
 	LIGA_MX: 262,
+	// Asia
+	SAUDI_PRO_LEAGUE: 307,
+	// International
+	WORLD_CUP: 1,
+	COPA_AMERICA: 9,
 } as const;
+
+// =============================================================================
+// LEAGUES BY CONTINENT
+// =============================================================================
+
+export type Continent = 'europe' | 'south-america' | 'north-america' | 'asia' | 'international';
+
+export interface LeagueInfo {
+	id: number;
+	name: string;
+	country: string;
+	emoji: string;
+}
+
+export interface ContinentLeagues {
+	name: string;
+	emoji: string;
+	leagues: LeagueInfo[];
+}
+
+export const LEAGUES_BY_CONTINENT: Record<Continent, ContinentLeagues> = {
+	europe: {
+		name: 'Europe',
+		emoji: '🌍',
+		leagues: [
+			{
+				id: POPULAR_LEAGUES.PREMIER_LEAGUE,
+				name: 'Premier League',
+				country: 'England',
+				emoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+			},
+			{ id: POPULAR_LEAGUES.LA_LIGA, name: 'La Liga', country: 'Spain', emoji: '🇪🇸' },
+			{ id: POPULAR_LEAGUES.SERIE_A, name: 'Serie A', country: 'Italy', emoji: '🇮🇹' },
+			{ id: POPULAR_LEAGUES.BUNDESLIGA, name: 'Bundesliga', country: 'Germany', emoji: '🇩🇪' },
+			{ id: POPULAR_LEAGUES.LIGUE_1, name: 'Ligue 1', country: 'France', emoji: '🇫🇷' },
+			{
+				id: POPULAR_LEAGUES.CHAMPIONS_LEAGUE,
+				name: 'Champions League',
+				country: 'Europe',
+				emoji: '🏆',
+			},
+		],
+	},
+	'south-america': {
+		name: 'South America',
+		emoji: '🌎',
+		leagues: [
+			{
+				id: POPULAR_LEAGUES.ARGENTINA_PRIMERA,
+				name: 'Liga Profesional',
+				country: 'Argentina',
+				emoji: '🇦🇷',
+			},
+			{
+				id: POPULAR_LEAGUES.BRASIL_SERIE_A,
+				name: 'Brasileirão',
+				country: 'Brazil',
+				emoji: '🇧🇷',
+			},
+			{
+				id: POPULAR_LEAGUES.COPA_LIBERTADORES,
+				name: 'Copa Libertadores',
+				country: 'South America',
+				emoji: '🏆',
+			},
+		],
+	},
+	'north-america': {
+		name: 'North & Central America',
+		emoji: '🌎',
+		leagues: [
+			{ id: POPULAR_LEAGUES.MLS, name: 'MLS', country: 'USA', emoji: '🇺🇸' },
+			{ id: POPULAR_LEAGUES.LIGA_MX, name: 'Liga MX', country: 'Mexico', emoji: '🇲🇽' },
+		],
+	},
+	asia: {
+		name: 'Asia',
+		emoji: '🌏',
+		leagues: [
+			{
+				id: POPULAR_LEAGUES.SAUDI_PRO_LEAGUE,
+				name: 'Saudi Pro League',
+				country: 'Saudi Arabia',
+				emoji: '🇸🇦',
+			},
+		],
+	},
+	international: {
+		name: 'International',
+		emoji: '🌐',
+		leagues: [
+			{ id: POPULAR_LEAGUES.WORLD_CUP, name: 'World Cup', country: 'FIFA', emoji: '🏆' },
+			{
+				id: POPULAR_LEAGUES.COPA_AMERICA,
+				name: 'Copa América',
+				country: 'CONMEBOL',
+				emoji: '🏆',
+			},
+		],
+	},
+};
 
 export const CURRENT_SEASON = 2025;
