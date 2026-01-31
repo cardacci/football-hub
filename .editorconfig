@@ -1,0 +1,48 @@
+# EditorConfig - https://editorconfig.org
+# Configuración universal de indentación para el proyecto
+
+root = true
+
+# Configuración por defecto para todos los archivos
+[*]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# TypeScript, JavaScript, TSX, JSX
+[*.{ts,tsx,js,jsx,mjs,cjs}]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+# JSON files
+[*.json]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+# CSS files
+[*.css]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+# Markdown - mantener espacios finales para saltos de línea
+[*.md]
+trim_trailing_whitespace = false
+indent_style = tab
+indent_size = 4
+
+# YAML files (requieren espacios, no tabs)
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Package files
+[package.json]
+indent_style = tab
+indent_size = 4
