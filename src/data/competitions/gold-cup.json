@@ -1,0 +1,49 @@
+{
+	"id": 22,
+	"name": "CONCACAF Gold Cup",
+	"type": "national",
+	"editions": [
+		{
+			"year": 2023,
+			"winner": "Mexico",
+			"runnerUp": "Panama",
+			"host": "USA/Canada",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 2021,
+			"winner": "USA",
+			"runnerUp": "Mexico",
+			"host": "USA",
+			"finalScore": "1-0 (a.e.t.)"
+		},
+		{
+			"year": 2019,
+			"winner": "Mexico",
+			"runnerUp": "USA",
+			"host": "USA/Costa Rica/Jamaica",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 2017,
+			"winner": "USA",
+			"runnerUp": "Jamaica",
+			"host": "USA",
+			"finalScore": "2-1"
+		},
+		{
+			"year": 2015,
+			"winner": "Mexico",
+			"runnerUp": "Jamaica",
+			"host": "USA/Canada",
+			"finalScore": "3-1"
+		},
+		{
+			"year": 2013,
+			"winner": "USA",
+			"runnerUp": "Panama",
+			"host": "USA",
+			"finalScore": "1-0"
+		}
+	]
+}

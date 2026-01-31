@@ -1,0 +1,161 @@
+{
+	"id": 1,
+	"name": "FIFA World Cup",
+	"type": "national",
+	"editions": [
+		{
+			"year": 2022,
+			"winner": "Argentina",
+			"runnerUp": "France",
+			"host": "Qatar",
+			"finalScore": "3-3 (4-2 pen)"
+		},
+		{
+			"year": 2018,
+			"winner": "France",
+			"runnerUp": "Croatia",
+			"host": "Russia",
+			"finalScore": "4-2"
+		},
+		{
+			"year": 2014,
+			"winner": "Germany",
+			"runnerUp": "Argentina",
+			"host": "Brazil",
+			"finalScore": "1-0 (a.e.t.)"
+		},
+		{
+			"year": 2010,
+			"winner": "Spain",
+			"runnerUp": "Netherlands",
+			"host": "South Africa",
+			"finalScore": "1-0 (a.e.t.)"
+		},
+		{
+			"year": 2006,
+			"winner": "Italy",
+			"runnerUp": "France",
+			"host": "Germany",
+			"finalScore": "1-1 (5-3 pen)"
+		},
+		{
+			"year": 2002,
+			"winner": "Brazil",
+			"runnerUp": "Germany",
+			"host": "South Korea/Japan",
+			"finalScore": "2-0"
+		},
+		{
+			"year": 1998,
+			"winner": "France",
+			"runnerUp": "Brazil",
+			"host": "France",
+			"finalScore": "3-0"
+		},
+		{
+			"year": 1994,
+			"winner": "Brazil",
+			"runnerUp": "Italy",
+			"host": "USA",
+			"finalScore": "0-0 (3-2 pen)"
+		},
+		{
+			"year": 1990,
+			"winner": "Germany",
+			"runnerUp": "Argentina",
+			"host": "Italy",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 1986,
+			"winner": "Argentina",
+			"runnerUp": "Germany",
+			"host": "Mexico",
+			"finalScore": "3-2"
+		},
+		{
+			"year": 1982,
+			"winner": "Italy",
+			"runnerUp": "Germany",
+			"host": "Spain",
+			"finalScore": "3-1"
+		},
+		{
+			"year": 1978,
+			"winner": "Argentina",
+			"runnerUp": "Netherlands",
+			"host": "Argentina",
+			"finalScore": "3-1 (a.e.t.)"
+		},
+		{
+			"year": 1974,
+			"winner": "Germany",
+			"runnerUp": "Netherlands",
+			"host": "Germany",
+			"finalScore": "2-1"
+		},
+		{
+			"year": 1970,
+			"winner": "Brazil",
+			"runnerUp": "Italy",
+			"host": "Mexico",
+			"finalScore": "4-1"
+		},
+		{
+			"year": 1966,
+			"winner": "England",
+			"runnerUp": "Germany",
+			"host": "England",
+			"finalScore": "4-2 (a.e.t.)"
+		},
+		{
+			"year": 1962,
+			"winner": "Brazil",
+			"runnerUp": "Czechoslovakia",
+			"host": "Chile",
+			"finalScore": "3-1"
+		},
+		{
+			"year": 1958,
+			"winner": "Brazil",
+			"runnerUp": "Sweden",
+			"host": "Sweden",
+			"finalScore": "5-2"
+		},
+		{
+			"year": 1954,
+			"winner": "Germany",
+			"runnerUp": "Hungary",
+			"host": "Switzerland",
+			"finalScore": "3-2"
+		},
+		{
+			"year": 1950,
+			"winner": "Uruguay",
+			"runnerUp": "Brazil",
+			"host": "Brazil",
+			"finalScore": "Round-robin"
+		},
+		{
+			"year": 1938,
+			"winner": "Italy",
+			"runnerUp": "Hungary",
+			"host": "France",
+			"finalScore": "4-2"
+		},
+		{
+			"year": 1934,
+			"winner": "Italy",
+			"runnerUp": "Czechoslovakia",
+			"host": "Italy",
+			"finalScore": "2-1 (a.e.t.)"
+		},
+		{
+			"year": 1930,
+			"winner": "Uruguay",
+			"runnerUp": "Argentina",
+			"host": "Uruguay",
+			"finalScore": "4-2"
+		}
+	]
+}

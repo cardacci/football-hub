@@ -1,0 +1,67 @@
+{
+	"id": 3,
+	"name": "UEFA Europa League",
+	"type": "clubs",
+	"editions": [
+		{
+			"year": "2023-24",
+			"winner": "Atalanta",
+			"runnerUp": "Bayer Leverkusen",
+			"finalScore": "3-0"
+		},
+		{
+			"year": "2022-23",
+			"winner": "Sevilla",
+			"runnerUp": "Roma",
+			"finalScore": "1-1 (4-1 pen)"
+		},
+		{
+			"year": "2021-22",
+			"winner": "Eintracht Frankfurt",
+			"runnerUp": "Rangers",
+			"finalScore": "1-1 (5-4 pen)"
+		},
+		{
+			"year": "2020-21",
+			"winner": "Villarreal",
+			"runnerUp": "Manchester United",
+			"finalScore": "1-1 (11-10 pen)"
+		},
+		{
+			"year": "2019-20",
+			"winner": "Sevilla",
+			"runnerUp": "Inter Milan",
+			"finalScore": "3-2"
+		},
+		{
+			"year": "2018-19",
+			"winner": "Chelsea",
+			"runnerUp": "Arsenal",
+			"finalScore": "4-1"
+		},
+		{
+			"year": "2017-18",
+			"winner": "Atlético Madrid",
+			"runnerUp": "Marseille",
+			"finalScore": "3-0"
+		},
+		{
+			"year": "2016-17",
+			"winner": "Manchester United",
+			"runnerUp": "Ajax",
+			"finalScore": "2-0"
+		},
+		{
+			"year": "2015-16",
+			"winner": "Sevilla",
+			"runnerUp": "Liverpool",
+			"finalScore": "3-1"
+		},
+		{
+			"year": "2014-15",
+			"winner": "Sevilla",
+			"runnerUp": "Dnipro",
+			"finalScore": "3-2"
+		}
+	]
+}

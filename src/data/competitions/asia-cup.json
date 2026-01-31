@@ -1,0 +1,49 @@
+{
+	"id": 7,
+	"name": "AFC Asian Cup",
+	"type": "national",
+	"editions": [
+		{
+			"year": 2024,
+			"winner": "Qatar",
+			"runnerUp": "Jordan",
+			"host": "Qatar",
+			"finalScore": "3-1"
+		},
+		{
+			"year": 2019,
+			"winner": "Qatar",
+			"runnerUp": "Japan",
+			"host": "UAE",
+			"finalScore": "3-1"
+		},
+		{
+			"year": 2015,
+			"winner": "Australia",
+			"runnerUp": "South Korea",
+			"host": "Australia",
+			"finalScore": "2-1 (a.e.t.)"
+		},
+		{
+			"year": 2011,
+			"winner": "Japan",
+			"runnerUp": "Australia",
+			"host": "Qatar",
+			"finalScore": "1-0 (a.e.t.)"
+		},
+		{
+			"year": 2007,
+			"winner": "Iraq",
+			"runnerUp": "Saudi Arabia",
+			"host": "Indonesia/Malaysia/Thailand/Vietnam",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 2004,
+			"winner": "Japan",
+			"runnerUp": "China",
+			"host": "China",
+			"finalScore": "3-1"
+		}
+	]
+}

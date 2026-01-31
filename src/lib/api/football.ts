@@ -582,3 +582,38 @@ export const LEAGUES_BY_CONTINENT: Record<Continent, ContinentLeagues> = {
 };
 
 export const CURRENT_SEASON = 2025;
+
+// =============================================================================
+// COMPETITION HISTORY TYPES (Data is loaded from src/data/competitions/)
+// =============================================================================
+
+export interface CompetitionEdition {
+	year: number | string; // Can be "1992-93" for leagues or 1930 for cups
+	winner: string;
+	winnerLogo?: string;
+	runnerUp: string;
+	runnerUpLogo?: string;
+	host?: string;
+	finalScore?: string;
+}
+
+export interface CompetitionHistory {
+	id: number;
+	name: string;
+	type: 'clubs' | 'national';
+	editions: CompetitionEdition[];
+}
+
+/**
+ * Get league seasons/years from API
+ */
+export async function getLeagueSeasons(leagueId: number): Promise<number[]> {
+	const data = await fetchFromAPI<APIResponse<League[]>>('/leagues', {
+		id: leagueId.toString(),
+	});
+
+	if (data.response.length > 0) {
+		return data.response[0].seasons.map((s) => s.year).sort((a, b) => b - a);
+	}
+	return [];
+}

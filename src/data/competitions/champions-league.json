@@ -1,0 +1,127 @@
+{
+	"id": 2,
+	"name": "UEFA Champions League",
+	"type": "clubs",
+	"editions": [
+		{
+			"year": "2023-24",
+			"winner": "Real Madrid",
+			"runnerUp": "Borussia Dortmund",
+			"finalScore": "2-0"
+		},
+		{
+			"year": "2022-23",
+			"winner": "Manchester City",
+			"runnerUp": "Inter Milan",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "2021-22",
+			"winner": "Real Madrid",
+			"runnerUp": "Liverpool",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "2020-21",
+			"winner": "Chelsea",
+			"runnerUp": "Manchester City",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "2019-20",
+			"winner": "Bayern Munich",
+			"runnerUp": "Paris Saint-Germain",
+			"finalScore": "1-0"
+		},
+		{
+			"year": "2018-19",
+			"winner": "Liverpool",
+			"runnerUp": "Tottenham Hotspur",
+			"finalScore": "2-0"
+		},
+		{
+			"year": "2017-18",
+			"winner": "Real Madrid",
+			"runnerUp": "Liverpool",
+			"finalScore": "3-1"
+		},
+		{
+			"year": "2016-17",
+			"winner": "Real Madrid",
+			"runnerUp": "Juventus",
+			"finalScore": "4-1"
+		},
+		{
+			"year": "2015-16",
+			"winner": "Real Madrid",
+			"runnerUp": "Atlético Madrid",
+			"finalScore": "1-1 (5-3 pen)"
+		},
+		{
+			"year": "2014-15",
+			"winner": "Barcelona",
+			"runnerUp": "Juventus",
+			"finalScore": "3-1"
+		},
+		{
+			"year": "2013-14",
+			"winner": "Real Madrid",
+			"runnerUp": "Atlético Madrid",
+			"finalScore": "4-1 (a.e.t.)"
+		},
+		{
+			"year": "2012-13",
+			"winner": "Bayern Munich",
+			"runnerUp": "Borussia Dortmund",
+			"finalScore": "2-1"
+		},
+		{
+			"year": "2011-12",
+			"winner": "Chelsea",
+			"runnerUp": "Bayern Munich",
+			"finalScore": "1-1 (4-3 pen)"
+		},
+		{
+			"year": "2010-11",
+			"winner": "Barcelona",
+			"runnerUp": "Manchester United",
+			"finalScore": "3-1"
+		},
+		{
+			"year": "2009-10",
+			"winner": "Inter Milan",
+			"runnerUp": "Bayern Munich",
+			"finalScore": "2-0"
+		},
+		{
+			"year": "2008-09",
+			"winner": "Barcelona",
+			"runnerUp": "Manchester United",
+			"finalScore": "2-0"
+		},
+		{
+			"year": "2007-08",
+			"winner": "Manchester United",
+			"runnerUp": "Chelsea",
+			"finalScore": "1-1 (6-5 pen)"
+		},
+		{
+			"year": "2006-07",
+			"winner": "AC Milan",
+			"runnerUp": "Liverpool",
+			"finalScore": "2-1"
+		},
+		{
+			"year": "2005-06",
+			"winner": "Barcelona",
+			"runnerUp": "Arsenal",
+			"finalScore": "2-1"
+		},
+		{
+			"year": "2004-05",
+			"winner": "Liverpool",
+			"runnerUp": "AC Milan",
+			"finalScore": "3-3 (3-2 pen)"
+		}
+	]
+}

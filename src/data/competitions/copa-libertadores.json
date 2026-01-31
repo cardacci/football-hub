@@ -1,0 +1,67 @@
+{
+	"id": 13,
+	"name": "Copa Libertadores",
+	"type": "clubs",
+	"editions": [
+		{
+			"year": 2024,
+			"winner": "Botafogo",
+			"runnerUp": "Atlético Mineiro",
+			"finalScore": "3-1"
+		},
+		{
+			"year": 2023,
+			"winner": "Fluminense",
+			"runnerUp": "Boca Juniors",
+			"finalScore": "2-1"
+		},
+		{
+			"year": 2022,
+			"winner": "Flamengo",
+			"runnerUp": "Athletico Paranaense",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 2021,
+			"winner": "Palmeiras",
+			"runnerUp": "Flamengo",
+			"finalScore": "2-1"
+		},
+		{
+			"year": 2020,
+			"winner": "Palmeiras",
+			"runnerUp": "Santos",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 2019,
+			"winner": "Flamengo",
+			"runnerUp": "River Plate",
+			"finalScore": "2-1"
+		},
+		{
+			"year": 2018,
+			"winner": "River Plate",
+			"runnerUp": "Boca Juniors",
+			"finalScore": "3-1 (agg)"
+		},
+		{
+			"year": 2017,
+			"winner": "Grêmio",
+			"runnerUp": "Lanús",
+			"finalScore": "3-1 (agg)"
+		},
+		{
+			"year": 2016,
+			"winner": "Atlético Nacional",
+			"runnerUp": "Independiente del Valle",
+			"finalScore": "2-1 (agg)"
+		},
+		{
+			"year": 2015,
+			"winner": "River Plate",
+			"runnerUp": "Tigres UANL",
+			"finalScore": "3-0 (agg)"
+		}
+	]
+}

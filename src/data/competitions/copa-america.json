@@ -1,0 +1,77 @@
+{
+	"id": 9,
+	"name": "Copa América",
+	"type": "national",
+	"editions": [
+		{
+			"year": 2024,
+			"winner": "Argentina",
+			"runnerUp": "Colombia",
+			"host": "USA",
+			"finalScore": "1-0 (a.e.t.)"
+		},
+		{
+			"year": 2021,
+			"winner": "Argentina",
+			"runnerUp": "Brazil",
+			"host": "Brazil",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 2019,
+			"winner": "Brazil",
+			"runnerUp": "Peru",
+			"host": "Brazil",
+			"finalScore": "3-1"
+		},
+		{
+			"year": 2016,
+			"winner": "Chile",
+			"runnerUp": "Argentina",
+			"host": "USA",
+			"finalScore": "0-0 (4-2 pen)"
+		},
+		{
+			"year": 2015,
+			"winner": "Chile",
+			"runnerUp": "Argentina",
+			"host": "Chile",
+			"finalScore": "0-0 (4-1 pen)"
+		},
+		{
+			"year": 2011,
+			"winner": "Uruguay",
+			"runnerUp": "Paraguay",
+			"host": "Argentina",
+			"finalScore": "3-0"
+		},
+		{
+			"year": 2007,
+			"winner": "Brazil",
+			"runnerUp": "Argentina",
+			"host": "Venezuela",
+			"finalScore": "3-0"
+		},
+		{
+			"year": 2004,
+			"winner": "Brazil",
+			"runnerUp": "Argentina",
+			"host": "Peru",
+			"finalScore": "2-2 (4-2 pen)"
+		},
+		{
+			"year": 2001,
+			"winner": "Colombia",
+			"runnerUp": "Mexico",
+			"host": "Colombia",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 1999,
+			"winner": "Brazil",
+			"runnerUp": "Uruguay",
+			"host": "Paraguay",
+			"finalScore": "3-0"
+		}
+	]
+}

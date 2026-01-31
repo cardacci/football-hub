@@ -1,0 +1,63 @@
+{
+	"id": 6,
+	"name": "Africa Cup of Nations",
+	"type": "national",
+	"editions": [
+		{
+			"year": 2024,
+			"winner": "Ivory Coast",
+			"runnerUp": "Nigeria",
+			"host": "Ivory Coast",
+			"finalScore": "2-1"
+		},
+		{
+			"year": 2022,
+			"winner": "Senegal",
+			"runnerUp": "Egypt",
+			"host": "Cameroon",
+			"finalScore": "0-0 (4-2 pen)"
+		},
+		{
+			"year": 2019,
+			"winner": "Algeria",
+			"runnerUp": "Senegal",
+			"host": "Egypt",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 2017,
+			"winner": "Cameroon",
+			"runnerUp": "Egypt",
+			"host": "Gabon",
+			"finalScore": "2-1"
+		},
+		{
+			"year": 2015,
+			"winner": "Ivory Coast",
+			"runnerUp": "Ghana",
+			"host": "Equatorial Guinea",
+			"finalScore": "0-0 (9-8 pen)"
+		},
+		{
+			"year": 2013,
+			"winner": "Nigeria",
+			"runnerUp": "Burkina Faso",
+			"host": "South Africa",
+			"finalScore": "1-0"
+		},
+		{
+			"year": 2012,
+			"winner": "Zambia",
+			"runnerUp": "Ivory Coast",
+			"host": "Gabon/Equatorial Guinea",
+			"finalScore": "0-0 (8-7 pen)"
+		},
+		{
+			"year": 2010,
+			"winner": "Egypt",
+			"runnerUp": "Ghana",
+			"host": "Angola",
+			"finalScore": "1-0"
+		}
+	]
+}
