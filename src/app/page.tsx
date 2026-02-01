@@ -1,16 +1,19 @@
+/* ===== Imports ===== */
 import Link from 'next/link';
-import { LEAGUES_BY_CONTINENT, type Continent } from '@/lib/api';
+import { type Continent, LEAGUES_BY_CONTINENT } from '@/lib/api';
 
+/* ===== Constants & Enums ===== */
+const CONTINENT_ORDER: Continent[] = [
+	'africa',
+	'asia',
+	'europe',
+	'international',
+	'north-america',
+	'south-america',
+];
+
+/* ===== Component Function ===== */
 export default function Home() {
-	const continentOrder: Continent[] = [
-		'europe',
-		'south-america',
-		'north-america',
-		'asia',
-		'africa',
-		'international',
-	];
-
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-900 dark:to-gray-800">
 			{/* Hero Section */}
@@ -84,7 +87,7 @@ export default function Home() {
 					</div>
 
 					<div className="space-y-16">
-						{continentOrder.map((continentKey) => {
+						{CONTINENT_ORDER.map((continentKey) => {
 							const continent = LEAGUES_BY_CONTINENT[continentKey];
 							return (
 								<div key={continentKey}>

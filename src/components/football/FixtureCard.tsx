@@ -1,21 +1,24 @@
-import { type Fixture } from '@/lib/api';
+/* ===== Imports ===== */
 import Image from 'next/image';
+import { type Fixture } from '@/lib/api';
 
+/* ===== Types & Interfaces ===== */
 interface FixtureCardProps {
 	fixture: Fixture;
 }
 
+/* ===== Component Function ===== */
 export function FixtureCard({ fixture }: FixtureCardProps) {
-	/* ===== Constants ===== */
+	/* ===== Derived Values ===== */
+	const isFinished =
+		fixture.fixture.status.short === 'FT' ||
+		fixture.fixture.status.short === 'AET' ||
+		fixture.fixture.status.short === 'PEN';
 	const isLive =
 		fixture.fixture.status.short === 'LIVE' ||
 		fixture.fixture.status.short === '1H' ||
 		fixture.fixture.status.short === '2H' ||
 		fixture.fixture.status.short === 'HT';
-	const isFinished =
-		fixture.fixture.status.short === 'FT' ||
-		fixture.fixture.status.short === 'AET' ||
-		fixture.fixture.status.short === 'PEN';
 
 	/* ===== Functions ===== */
 	const formatDate = (dateString: string) => {

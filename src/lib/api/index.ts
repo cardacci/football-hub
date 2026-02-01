@@ -5,9 +5,9 @@
  * Import all API functions from this file for consistency.
  */
 
-// Football API exports
+/* ===== Exports ===== */
 export * from './football';
 
 // Future API services can be added here:
-// export * from './weather';
 // export * from './news';
+// export * from './weather';

@@ -1,13 +1,19 @@
-import { type League } from '@/lib/api';
+/* ===== Imports ===== */
 import Image from 'next/image';
 import Link from 'next/link';
+import { type League } from '@/lib/api';
+
+/* ===== Types & Interfaces ===== */
+type LeagueVariant = 'clubs' | 'national';
 
 interface LeagueCardProps {
 	league: League;
-	variant?: 'clubs' | 'national';
+	variant?: LeagueVariant;
 }
 
+/* ===== Component Function ===== */
 export function LeagueCard({ league, variant = 'clubs' }: LeagueCardProps) {
+	/* ===== Derived Values ===== */
 	const currentSeason = league.seasons.find((s) => s.current);
 	const isNational = variant === 'national';
 

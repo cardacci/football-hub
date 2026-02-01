@@ -2,6 +2,7 @@
  * Football Components - Central Export
  */
 
-export { StandingsTable } from './StandingsTable';
+/* ===== Exports ===== */
 export { FixtureCard } from './FixtureCard';
 export { LeagueCard } from './LeagueCard';
+export { StandingsTable } from './StandingsTable';

@@ -1,12 +1,15 @@
-import { type Standing } from '@/lib/api';
+/* ===== Imports ===== */
 import Image from 'next/image';
+import { type Standing } from '@/lib/api';
 
+/* ===== Types & Interfaces ===== */
 interface StandingsTableProps {
-	standings: Standing[];
 	leagueName?: string;
+	standings: Standing[];
 }
 
-export function StandingsTable({ standings, leagueName }: StandingsTableProps) {
+/* ===== Component Function ===== */
+export function StandingsTable({ leagueName, standings }: StandingsTableProps) {
 	if (standings.length === 0) {
 		return <div className="py-8 text-center text-gray-500">No standings data available</div>;
 	}

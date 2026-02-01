@@ -6,20 +6,19 @@
  * Since these are historical records (champions never change), they are stored as static JSON.
  */
 
+/* ===== Imports ===== */
 import { POPULAR_LEAGUES } from '../lib/api/football';
-
-// Import all competition data from JSON files
-import worldCupData from './competitions/world-cup.json';
-import championsLeagueData from './competitions/champions-league.json';
-import europaLeagueData from './competitions/europa-league.json';
-import euroData from './competitions/euro.json';
 import africaCupData from './competitions/africa-cup.json';
 import asiaCupData from './competitions/asia-cup.json';
+import championsLeagueData from './competitions/champions-league.json';
 import copaAmericaData from './competitions/copa-america.json';
 import copaLibertadoresData from './competitions/copa-libertadores.json';
+import euroData from './competitions/euro.json';
+import europaLeagueData from './competitions/europa-league.json';
 import goldCupData from './competitions/gold-cup.json';
+import worldCupData from './competitions/world-cup.json';
 
-// Types for competition data
+/* ===== Types & Interfaces ===== */
 export interface CompetitionEdition {
 	finalScore?: string;
 	host?: string;
@@ -37,7 +36,7 @@ export interface CompetitionHistory {
 	type: 'clubs' | 'national';
 }
 
-// Map competition data by league ID
+/* ===== Constants & Enums ===== */
 export const COMPETITION_HISTORY: Record<number, CompetitionHistory> = {
 	[POPULAR_LEAGUES.AFRICA_CUP]: africaCupData as CompetitionHistory,
 	[POPULAR_LEAGUES.ASIA_CUP]: asiaCupData as CompetitionHistory,
@@ -50,13 +49,7 @@ export const COMPETITION_HISTORY: Record<number, CompetitionHistory> = {
 	[POPULAR_LEAGUES.WORLD_CUP]: worldCupData as CompetitionHistory,
 };
 
-/**
- * Get competition history by league ID
- */
-export function getCompetitionHistory(leagueId: number): CompetitionHistory | null {
-	return COMPETITION_HISTORY[leagueId] || null;
-}
-
+/* ===== Functions ===== */
 /**
  * Calculate titles count from competition history
  */
@@ -95,4 +88,11 @@ export function calculateTitlesCount(history: CompetitionHistory): Array<{
  */
 export function getAllCompetitionsWithHistory(): CompetitionHistory[] {
 	return Object.values(COMPETITION_HISTORY);
+}
+
+/**
+ * Get competition history by league ID
+ */
+export function getCompetitionHistory(leagueId: number): CompetitionHistory | null {
+	return COMPETITION_HISTORY[leagueId] || null;
 }

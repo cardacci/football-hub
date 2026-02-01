@@ -1,22 +1,52 @@
+/* ===== Imports ===== */
+import Link from 'next/link';
+import { StandingsTable } from '@/components/football';
+import { calculateTitlesCount, COMPETITION_HISTORY } from '@/data';
 import {
-	getStandings,
-	getLeagueSeasons,
-	POPULAR_LEAGUES,
 	CURRENT_SEASON,
+	getLeagueSeasons,
+	getStandings,
 	LEAGUES_BY_CONTINENT,
+	POPULAR_LEAGUES,
 	type LeagueInfo,
 } from '@/lib/api';
-import { COMPETITION_HISTORY, calculateTitlesCount } from '@/data';
-import { StandingsTable } from '@/components/football';
-import Link from 'next/link';
 
+/* ===== Constants & Enums ===== */
+const LEAGUE_NAMES: Record<number, string> = {
+	[POPULAR_LEAGUES.AFC_CHAMPIONS_LEAGUE]: 'AFC Champions League',
+	[POPULAR_LEAGUES.AFRICA_CUP]: 'Africa Cup of Nations',
+	[POPULAR_LEAGUES.ARGENTINA_PRIMERA]: 'Liga Profesional Argentina',
+	[POPULAR_LEAGUES.ASIA_CUP]: 'AFC Asian Cup',
+	[POPULAR_LEAGUES.BRASIL_SERIE_A]: 'Brasileirão Série A',
+	[POPULAR_LEAGUES.BUNDESLIGA]: 'Bundesliga',
+	[POPULAR_LEAGUES.CAF_CHAMPIONS_LEAGUE]: 'CAF Champions League',
+	[POPULAR_LEAGUES.CHAMPIONS_LEAGUE]: 'UEFA Champions League',
+	[POPULAR_LEAGUES.CONCACAF_CHAMPIONS_LEAGUE]: 'CONCACAF Champions Cup',
+	[POPULAR_LEAGUES.CONCACAF_GOLD_CUP]: 'CONCACAF Gold Cup',
+	[POPULAR_LEAGUES.COPA_AMERICA]: 'Copa América',
+	[POPULAR_LEAGUES.COPA_LIBERTADORES]: 'Copa Libertadores',
+	[POPULAR_LEAGUES.COPA_SUDAMERICANA]: 'Copa Sudamericana',
+	[POPULAR_LEAGUES.EURO]: 'UEFA European Championship',
+	[POPULAR_LEAGUES.EUROPA_CONFERENCE_LEAGUE]: 'UEFA Europa Conference League',
+	[POPULAR_LEAGUES.EUROPA_LEAGUE]: 'UEFA Europa League',
+	[POPULAR_LEAGUES.LA_LIGA]: 'La Liga',
+	[POPULAR_LEAGUES.LIGA_MX]: 'Liga MX',
+	[POPULAR_LEAGUES.LIGUE_1]: 'Ligue 1',
+	[POPULAR_LEAGUES.MLS]: 'MLS',
+	[POPULAR_LEAGUES.PREMIER_LEAGUE]: 'Premier League',
+	[POPULAR_LEAGUES.SAUDI_PRO_LEAGUE]: 'Saudi Pro League',
+	[POPULAR_LEAGUES.SERIE_A]: 'Serie A',
+	[POPULAR_LEAGUES.WORLD_CUP]: 'FIFA World Cup',
+};
+
+/* ===== Types & Interfaces ===== */
 interface LeaguePageProps {
 	params: Promise<{
 		id: string;
 	}>;
 }
 
-// Find league info from LEAGUES_BY_CONTINENT
+/* ===== Functions ===== */
 function findLeagueInfo(leagueId: number): LeagueInfo | null {
 	for (const continent of Object.values(LEAGUES_BY_CONTINENT)) {
 		const league = continent.leagues.find((l) => l.id === leagueId);
@@ -28,47 +58,21 @@ function findLeagueInfo(leagueId: number): LeagueInfo | null {
 	return null;
 }
 
-const LEAGUE_NAMES: Record<number, string> = {
-	[POPULAR_LEAGUES.PREMIER_LEAGUE]: 'Premier League',
-	[POPULAR_LEAGUES.LA_LIGA]: 'La Liga',
-	[POPULAR_LEAGUES.SERIE_A]: 'Serie A',
-	[POPULAR_LEAGUES.BUNDESLIGA]: 'Bundesliga',
-	[POPULAR_LEAGUES.LIGUE_1]: 'Ligue 1',
-	[POPULAR_LEAGUES.CHAMPIONS_LEAGUE]: 'UEFA Champions League',
-	[POPULAR_LEAGUES.EUROPA_LEAGUE]: 'UEFA Europa League',
-	[POPULAR_LEAGUES.EUROPA_CONFERENCE_LEAGUE]: 'UEFA Europa Conference League',
-	[POPULAR_LEAGUES.MLS]: 'MLS',
-	[POPULAR_LEAGUES.LIGA_MX]: 'Liga MX',
-	[POPULAR_LEAGUES.ARGENTINA_PRIMERA]: 'Liga Profesional Argentina',
-	[POPULAR_LEAGUES.BRASIL_SERIE_A]: 'Brasileirão Série A',
-	[POPULAR_LEAGUES.SAUDI_PRO_LEAGUE]: 'Saudi Pro League',
-	[POPULAR_LEAGUES.COPA_LIBERTADORES]: 'Copa Libertadores',
-	[POPULAR_LEAGUES.COPA_SUDAMERICANA]: 'Copa Sudamericana',
-	[POPULAR_LEAGUES.AFC_CHAMPIONS_LEAGUE]: 'AFC Champions League',
-	[POPULAR_LEAGUES.CAF_CHAMPIONS_LEAGUE]: 'CAF Champions League',
-	[POPULAR_LEAGUES.CONCACAF_CHAMPIONS_LEAGUE]: 'CONCACAF Champions Cup',
-	[POPULAR_LEAGUES.WORLD_CUP]: 'FIFA World Cup',
-	[POPULAR_LEAGUES.EURO]: 'UEFA European Championship',
-	[POPULAR_LEAGUES.COPA_AMERICA]: 'Copa América',
-	[POPULAR_LEAGUES.AFRICA_CUP]: 'Africa Cup of Nations',
-	[POPULAR_LEAGUES.ASIA_CUP]: 'AFC Asian Cup',
-	[POPULAR_LEAGUES.CONCACAF_GOLD_CUP]: 'CONCACAF Gold Cup',
-};
-
+/* ===== Component Function ===== */
 export default async function LeaguePage({ params }: LeaguePageProps) {
+	/* ===== Derived Values ===== */
 	const { id } = await params;
 	const leagueId = parseInt(id);
-	const leagueName = LEAGUE_NAMES[leagueId] || `League ${leagueId}`;
+	const competitionHistory = COMPETITION_HISTORY[leagueId];
 	const leagueInfo = findLeagueInfo(leagueId);
 	const isNational = leagueInfo?.type === 'national';
-
-	// Check if this competition has historical data
-	const competitionHistory = COMPETITION_HISTORY[leagueId];
+	const leagueName = LEAGUE_NAMES[leagueId] || `League ${leagueId}`;
 	const titlesRanking = competitionHistory ? calculateTitlesCount(competitionHistory) : null;
 
-	let standings;
-	let seasons: number[] = [];
+	/* ===== Data Fetching ===== */
 	let error = null;
+	let seasons: number[] = [];
+	let standings;
 
 	try {
 		// Get available seasons

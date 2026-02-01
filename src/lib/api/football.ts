@@ -9,12 +9,12 @@
  * - Access to leagues, teams, players, fixtures, and standings
  */
 
+/* ===== Constants & Enums ===== */
 const API_BASE_URL = 'https://api-football-v1.p.rapidapi.com/v3';
-
-// Environment variables for API configuration
-const API_KEY = process.env.FOOTBALL_API_KEY || '';
 const API_HOST = 'api-football-v1.p.rapidapi.com';
+const API_KEY = process.env.FOOTBALL_API_KEY || '';
 
+/* ===== Functions ===== */
 /**
  * Base headers for API requests
  */
@@ -49,144 +49,178 @@ async function fetchFromAPI<T>(endpoint: string, params?: Record<string, string>
 	return data;
 }
 
-// =============================================================================
-// TYPES
-// =============================================================================
-
-export interface League {
-	league: {
-		id: number;
-		name: string;
-		type: string;
-		logo: string;
-	};
-	country: {
-		name: string;
-		code: string;
-		flag: string;
-	};
-	seasons: Array<{
-		year: number;
-		start: string;
-		end: string;
-		current: boolean;
-	}>;
-}
-
-export interface Team {
-	team: {
-		id: number;
-		name: string;
-		code: string;
-		country: string;
-		founded: number;
-		national: boolean;
-		logo: string;
-	};
-	venue: {
-		id: number;
-		name: string;
-		address: string;
-		city: string;
-		capacity: number;
-		surface: string;
-		image: string;
-	};
-}
-
-export interface Standing {
-	rank: number;
-	team: {
-		id: number;
-		name: string;
-		logo: string;
-	};
-	points: number;
-	goalsDiff: number;
-	group: string;
-	form: string;
-	status: string;
-	description: string;
-	all: {
-		played: number;
-		win: number;
-		draw: number;
-		lose: number;
-		goals: {
-			for: number;
-			against: number;
-		};
-	};
-}
-
-export interface Fixture {
-	fixture: {
-		id: number;
-		referee: string;
-		timezone: string;
-		date: string;
-		timestamp: number;
-		venue: {
-			id: number;
-			name: string;
-			city: string;
-		};
-		status: {
-			long: string;
-			short: string;
-			elapsed: number;
-		};
-	};
-	league: {
-		id: number;
-		name: string;
-		country: string;
-		logo: string;
-		flag: string;
-		season: number;
-		round: string;
-	};
-	teams: {
-		home: {
-			id: number;
-			name: string;
-			logo: string;
-			winner: boolean | null;
-		};
-		away: {
-			id: number;
-			name: string;
-			logo: string;
-			winner: boolean | null;
-		};
-	};
-	goals: {
-		home: number | null;
-		away: number | null;
-	};
-	score: {
-		halftime: { home: number | null; away: number | null };
-		fulltime: { home: number | null; away: number | null };
-		extratime: { home: number | null; away: number | null };
-		penalty: { home: number | null; away: number | null };
-	};
-}
-
+/* ===== Types & Interfaces ===== */
 export interface APIResponse<T> {
-	get: string;
-	parameters: Record<string, string>;
 	errors: Record<string, string> | string[];
-	results: number;
+	get: string;
 	paging: {
 		current: number;
 		total: number;
 	};
+	parameters: Record<string, string>;
 	response: T;
+	results: number;
 }
 
-// =============================================================================
-// API FUNCTIONS
-// =============================================================================
+export interface CompetitionEdition {
+	finalScore?: string;
+	host?: string;
+	runnerUp: string;
+	runnerUpLogo?: string;
+	winner: string;
+	winnerLogo?: string;
+	year: number | string;
+}
+
+export interface CompetitionHistory {
+	editions: CompetitionEdition[];
+	id: number;
+	name: string;
+	type: 'clubs' | 'national';
+}
+
+export interface ContinentLeagues {
+	emoji: string;
+	leagues: LeagueInfo[];
+	name: string;
+}
+
+export interface Fixture {
+	fixture: {
+		date: string;
+		id: number;
+		referee: string;
+		status: {
+			elapsed: number;
+			long: string;
+			short: string;
+		};
+		timestamp: number;
+		timezone: string;
+		venue: {
+			city: string;
+			id: number;
+			name: string;
+		};
+	};
+	goals: {
+		away: number | null;
+		home: number | null;
+	};
+	league: {
+		country: string;
+		flag: string;
+		id: number;
+		logo: string;
+		name: string;
+		round: string;
+		season: number;
+	};
+	score: {
+		extratime: { away: number | null; home: number | null };
+		fulltime: { away: number | null; home: number | null };
+		halftime: { away: number | null; home: number | null };
+		penalty: { away: number | null; home: number | null };
+	};
+	teams: {
+		away: {
+			id: number;
+			logo: string;
+			name: string;
+			winner: boolean | null;
+		};
+		home: {
+			id: number;
+			logo: string;
+			name: string;
+			winner: boolean | null;
+		};
+	};
+}
+
+export interface League {
+	country: {
+		code: string;
+		flag: string;
+		name: string;
+	};
+	league: {
+		id: number;
+		logo: string;
+		name: string;
+		type: string;
+	};
+	seasons: Array<{
+		current: boolean;
+		end: string;
+		start: string;
+		year: number;
+	}>;
+}
+
+export interface LeagueInfo {
+	country: string;
+	emoji: string;
+	id: number;
+	name: string;
+	type: 'clubs' | 'national';
+}
+
+export interface Standing {
+	all: {
+		draw: number;
+		goals: {
+			against: number;
+			for: number;
+		};
+		lose: number;
+		played: number;
+		win: number;
+	};
+	description: string;
+	form: string;
+	goalsDiff: number;
+	group: string;
+	points: number;
+	rank: number;
+	status: string;
+	team: {
+		id: number;
+		logo: string;
+		name: string;
+	};
+}
+
+export interface Team {
+	team: {
+		code: string;
+		country: string;
+		founded: number;
+		id: number;
+		logo: string;
+		name: string;
+		national: boolean;
+	};
+	venue: {
+		address: string;
+		capacity: number;
+		city: string;
+		id: number;
+		image: string;
+		name: string;
+		surface: string;
+	};
+}
+
+export type Continent =
+	| 'africa'
+	| 'asia'
+	| 'europe'
+	| 'international'
+	| 'north-america'
+	| 'south-america';
+
+/* ===== API Functions ===== */
 
 /**
  * Get available leagues
@@ -312,12 +346,10 @@ export async function getLiveFixtures(): Promise<Fixture[]> {
 	return data.response;
 }
 
-// =============================================================================
-// POPULAR LEAGUE IDS (for convenience)
-// =============================================================================
+/* ===== Constants & Configuration ===== */
+export const CURRENT_SEASON = 2025;
 
 export const POPULAR_LEAGUES = {
-	// Africa - Continental Competitions
 	AFC_CHAMPIONS_LEAGUE: 17,
 	AFRICA_CUP: 6,
 	ARGENTINA_PRIMERA: 128,
@@ -343,32 +375,6 @@ export const POPULAR_LEAGUES = {
 	SERIE_A: 135,
 	WORLD_CUP: 1,
 } as const;
-
-// =============================================================================
-// LEAGUES BY CONTINENT
-// =============================================================================
-
-export type Continent =
-	| 'europe'
-	| 'south-america'
-	| 'north-america'
-	| 'asia'
-	| 'africa'
-	| 'international';
-
-export interface LeagueInfo {
-	id: number;
-	name: string;
-	country: string;
-	emoji: string;
-	type: 'clubs' | 'national';
-}
-
-export interface ContinentLeagues {
-	name: string;
-	emoji: string;
-	leagues: LeagueInfo[];
-}
 
 export const LEAGUES_BY_CONTINENT: Record<Continent, ContinentLeagues> = {
 	africa: {
@@ -570,29 +576,6 @@ export const LEAGUES_BY_CONTINENT: Record<Continent, ContinentLeagues> = {
 		name: 'South America',
 	},
 };
-
-export const CURRENT_SEASON = 2025;
-
-// =============================================================================
-// COMPETITION HISTORY TYPES (Data is loaded from src/data/competitions/)
-// =============================================================================
-
-export interface CompetitionEdition {
-	year: number | string; // Can be "1992-93" for leagues or 1930 for cups
-	winner: string;
-	winnerLogo?: string;
-	runnerUp: string;
-	runnerUpLogo?: string;
-	host?: string;
-	finalScore?: string;
-}
-
-export interface CompetitionHistory {
-	id: number;
-	name: string;
-	type: 'clubs' | 'national';
-	editions: CompetitionEdition[];
-}
 
 /**
  * Get league seasons/years from API
