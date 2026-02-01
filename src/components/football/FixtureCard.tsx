@@ -6,17 +6,18 @@ interface FixtureCardProps {
 }
 
 export function FixtureCard({ fixture }: FixtureCardProps) {
+	/* ===== Constants ===== */
 	const isLive =
 		fixture.fixture.status.short === 'LIVE' ||
 		fixture.fixture.status.short === '1H' ||
 		fixture.fixture.status.short === '2H' ||
 		fixture.fixture.status.short === 'HT';
-
 	const isFinished =
 		fixture.fixture.status.short === 'FT' ||
 		fixture.fixture.status.short === 'AET' ||
 		fixture.fixture.status.short === 'PEN';
 
+	/* ===== Functions ===== */
 	const formatDate = (dateString: string) => {
 		const date = new Date(dateString);
 		return date.toLocaleDateString('en-US', {
@@ -28,6 +29,7 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 
 	const formatTime = (dateString: string) => {
 		const date = new Date(dateString);
+
 		return date.toLocaleTimeString('en-US', {
 			hour: '2-digit',
 			minute: '2-digit',
@@ -45,6 +47,7 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 					src={fixture.league.logo}
 					width={20}
 				/>
+
 				<span className="text-xs text-gray-500 dark:text-gray-400">
 					{fixture.league.name} • {fixture.league.round}
 				</span>
@@ -64,6 +67,7 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 				) : (
 					<div className="text-xs text-gray-500 dark:text-gray-400">
 						<div>{formatDate(fixture.fixture.date)}</div>
+
 						<div className="font-semibold text-gray-700 dark:text-gray-300">
 							{formatTime(fixture.fixture.date)}
 						</div>
@@ -83,6 +87,7 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 							src={fixture.teams.home.logo}
 							width={48}
 						/>
+
 						<span className="line-clamp-2 text-sm font-medium text-gray-900 dark:text-white">
 							{fixture.teams.home.name}
 						</span>
@@ -100,7 +105,9 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 					>
 						{fixture.goals.home ?? '-'}
 					</span>
+
 					<span className="text-gray-400">:</span>
+
 					<span
 						className={`text-2xl font-bold ${
 							fixture.teams.away.winner
@@ -122,6 +129,7 @@ export function FixtureCard({ fixture }: FixtureCardProps) {
 							src={fixture.teams.away.logo}
 							width={48}
 						/>
+
 						<span className="line-clamp-2 text-sm font-medium text-gray-900 dark:text-white">
 							{fixture.teams.away.name}
 						</span>
